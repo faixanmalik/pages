@@ -29,6 +29,7 @@ const UpperStatusBar = () => {
             <path d="M19 13V27" stroke="#8F8F8F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M12 20H26" stroke="#8F8F8F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
+
         </div>
 
         <div className='flex gap-6 font-semibold text-sm mr-20 items-center'>
