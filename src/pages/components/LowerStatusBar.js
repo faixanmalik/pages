@@ -70,9 +70,9 @@ const LowerStatusBar = () => {
 
       <div className='flex space-x-10 items-center ml-16'>
         {headerItems.map((item, index)=>{
-          return  <div key={index} className='items-center py-1 space-y-1 flex-col justify-items-center '>
-          <item.icon className='text-[#9e9e9e] text-3xl mx-auto'/>
-          <h1 className='text-[#8F8F8F] text-[14px] font-semibold'>{item.title}</h1>
+          return  <div key={index} className='items-center py-1 space-y-1 flex-col justify-items-center'>
+          <item.icon className='text-[#9e9e9e] text-[36px] mx-auto hover:text-white'/>
+          <h1 className='text-[#8F8F8F] text-[15px] font-semibold'>{item.title}</h1>
           </div>
         })}
       </div>
