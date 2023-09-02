@@ -149,9 +149,9 @@ const Customer = () => {
 
                 </div>
               </div>
-                <div className='flex justify-end'>
-                  <button className='text-[#8F8F8F] flex gap-2 font-semibold items-center hover:text-white border border-gray-500 px-3 py-1 cursor-pointer'><FaPlus className='text-gray-600'/> Add New Number</button>
-                </div>
+              <div className='flex group justify-end'>
+                <button className='text-[#8F8F8F] flex gap-2 font-semibold items-center group-hover:text-white group-hover:bg-[#ee8e00] group-hover:border-none border border-gray-500 px-3 py-1 cursor-pointer'><FaPlus className='text-gray-600 group-hover:text-white group-hover:bg-[#ee8e00]'/> Add New Number</button>
+              </div>
 
             </div>
 
@@ -192,8 +192,8 @@ const Customer = () => {
                 <input name="zipCode" id='zipCode' type="number" className="px-3 py-2 mt-1 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
-              <div className='flex justify-end my-3'>
-                <button className='text-[#8F8F8F] flex gap-2 font-semibold items-center hover:text-white border border-gray-500 px-3 py-1 cursor-pointer'><FaPlus className='text-gray-600'/> Add Another Site/Address</button>
+              <div className='group flex justify-end my-3'>
+                <button className='text-[#8F8F8F] flex gap-2 font-semibold items-center group-hover:text-white group-hover:bg-[#ee8e00] group-hover:border-none border border-gray-500 px-3 py-1 cursor-pointer'><FaPlus className='text-gray-600 group-hover:text-white group-hover:bg-[#ee8e00]'/> Add Another Site/Address</button>
               </div>
 
               <div className='flex items-center gap-2'>
