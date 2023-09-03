@@ -76,49 +76,49 @@ const Products = () => {
 
         {/* Table */}
         
-        <div class="relative overflow-x-auto mt-10 px-5 min-h-screen">
-            <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+        <div className="relative overflow-x-auto mt-10 px-5 min-h-screen">
+            <table className="w-full text-sm text-left text-gray-500 ">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-100">
                     <tr>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Product name
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Supplier Name
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Date of registration
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Month of warrenty
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Barcode
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             Price
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     {tableData.map((item, index)=>{
-                        return <tr key={index} class="bg-white border-b">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        return <tr key={index} className="bg-white border-b">
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                             {item.productName}
                         </th>
-                        <td class="px-6 py-4">
+                        <td className="px-6 py-4">
                             {item.dateOfRegistration}
                         </td>
-                        <td class="px-6 py-4">
+                        <td className="px-6 py-4">
                             {item.supplierName}
                         </td>
-                        <td class="px-6 py-4">
+                        <td className="px-6 py-4">
                             {item.monthOfWarrenty}
                         </td>
-                        <td class="px-6 py-4">
+                        <td className="px-6 py-4">
                             {item.barcode}
                         </td>
-                        <td class="px-6 py-4">
+                        <td className="px-6 py-4">
                             ${item.price}
                         </td>
                     </tr>
