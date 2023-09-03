@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillCheckCircleFill } from 'react-icons/bs'
+import { BsFillCheckCircleFill, BsSearch } from 'react-icons/bs'
 
 const Products = () => {
 
@@ -59,7 +59,7 @@ const Products = () => {
 
                 <div className='flex items-center w-full'>
                     <button type="submit" className='flex p-[8px] rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
-                        <BsFillCheckCircleFill className='text-sm'/>Start
+                        Search <BsSearch className='text-sm'/>
                     </button>
                 </div>
                 
