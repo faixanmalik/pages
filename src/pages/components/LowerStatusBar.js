@@ -18,6 +18,11 @@ const LowerStatusBar = () => {
       link: '/menu/customers'
     },
     {
+      title: 'Products',
+      icon: FaShoppingCart,
+      link: '/menu/products'
+    },
+    {
       title: 'Invoices',
       icon: FaShoppingCart,
       link: '/menu/invoices'
