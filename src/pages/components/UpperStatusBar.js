@@ -15,7 +15,7 @@ const UpperStatusBar = () => {
 
 
         <div className='pl-10 flex flex-1 gap-6 items-center'>
-          <h1 className='text-[#8F8F8F] font-semibold'>{headerText}</h1>
+          <h1 className='text-white font-semibold'>{headerText}</h1>
           <div className="relative items-center">
             <div className="absolute top-3 left-0 flex items-center pl-3 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500 dark:text-[#d4d4d4]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
