@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import { BsSearch } from 'react-icons/bs'
+import { BsFillArrowRightCircleFill, BsSearch } from 'react-icons/bs'
 
 const Products = () => {
 
@@ -66,7 +66,7 @@ const Products = () => {
 
                 <div className='flex items-center w-full'>
                     <button type="submit" className='flex p-[8px] rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
-                        Search <BsSearch className='text-sm'/>
+                        Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
                     </button>
                 </div>
                 
