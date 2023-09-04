@@ -60,11 +60,11 @@ const Customer = () => {
 
 
   return (
-    <div className='bg-[#f7f7f7] px-20'>
+    <div className='bg-[#f7f7f7] px-10'>
 
       <div className='flex items-center'>
         <div className='pl-5 p-[20px] flex flex-1 gap-6 items-center'>
-          <h1 className='text-[#8F8F8F] text-xl font-semibold'>{headerText}</h1>
+          <h1 className='text-black text-xl font-semibold'>{headerText}</h1>
         </div>
 
         <div className='flex gap-6 font-semibold text-sm mr-5 items-center'>
@@ -99,11 +99,11 @@ const Customer = () => {
         </div>
 
           {/* Customer Info */}
-        <div className='px-5 py-5 border-b border-gray-500'>
+        <div className='p-5 border-b border-gray-500'>
           <h1 className='text-gray-600 font-semibold'>Basic Info</h1>
-          <div className='flex w-full items-center gap-7'>
+          <div className='flex w-full items-center gap-7 mt-3'>
             {/* Right Section */}
-            <div className='w-full items-center'>
+            <div className='w-full -mt-14 items-center'>
 
               <div className='flex items-center gap-2'>
                 <BiSolidUser className='text-xl text-gray-600'/>
@@ -139,13 +139,13 @@ const Customer = () => {
                   <select
                     id="countryCode"
                     name="countryCode"
-                    className="px-3 py-2 mt-1 mb-4 w-[75px] text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                    className="px-3 py-2 mt-1 mb-4 w-[90px] text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                   >
                     {mainCountryCodes.map((item,index)=>{
                       return <option key={index} value={item}>{item}</option>
                     })}
                   </select>
-                  <input name="phoneNo" id='phoneNo' type="number" className="w-[250px] px-3 py-2 mt-1 mb-4 text-sm  bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <input name="phoneNo" id='phoneNo' type="number" className="w-[260px] px-3 py-2 mt-1 mb-4 text-sm  bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                 </div>
               </div>
