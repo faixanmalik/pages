@@ -29,50 +29,124 @@ const Products = () => {
             barcode: 'xxxxxxxxxx',
             price: 499,
         },
+        {
+            productName: 'Apple MacBook Pro 17',
+            dateOfRegistration: 'Tomorrow',
+            supplierName: 'Apple Store',
+            monthOfWarrenty: 12,
+            barcode: 'xxxxxxxxxx',
+            price: 2999,
+        },
+        {
+            productName: 'Microsoft Surface Pro',
+            dateOfRegistration: 'Today',
+            supplierName: 'Microsoft Store',
+            monthOfWarrenty: 10,
+            barcode: 'xxxxxxxxxx',
+            price: 4599,
+        },
+        {
+            productName: 'Magic Mouse 2',
+            dateOfRegistration: 'Day After Tomorrow',
+            supplierName: 'Magic Mouse Store',
+            monthOfWarrenty: 11,
+            barcode: 'xxxxxxxxxx',
+            price: 499,
+        },
+        {
+            productName: 'Apple MacBook Pro 17',
+            dateOfRegistration: 'Tomorrow',
+            supplierName: 'Apple Store',
+            monthOfWarrenty: 12,
+            barcode: 'xxxxxxxxxx',
+            price: 2999,
+        },
+        {
+            productName: 'Microsoft Surface Pro',
+            dateOfRegistration: 'Today',
+            supplierName: 'Microsoft Store',
+            monthOfWarrenty: 10,
+            barcode: 'xxxxxxxxxx',
+            price: 4599,
+        },
+        {
+            productName: 'Magic Mouse 2',
+            dateOfRegistration: 'Day After Tomorrow',
+            supplierName: 'Magic Mouse Store',
+            monthOfWarrenty: 11,
+            barcode: 'xxxxxxxxxx',
+            price: 499,
+        },
     ]
+
+
     
   return (
-    <div className='bg-[#f7f7f7] min-h-screen pb-1'>
+    <div className='bg-[#f7f7f7] min-h-screen pb-1 px-20 2xl:px-40'>
 
+        <div className='flex items-center px-10'>
     
-        <div className='items-center pt-5 space-y-3 flex-col'>
+            <div className='items-center pt-5 flex-col w-full'>
 
-            <div className='flex gap-6 font-semibold w-full text-sm px-5 items-center'>
+                <div className='flex font-semibold w-full text-sm px-5 items-center'>
 
-                <div className='flex items-center gap-2 w-full'>
-                    <label className="font-semibold text-sm text-gray-600 pb-1">Product Name</label>
-                    <input name="productName" id='productName' type="text" className="px-3 py-2 mt-1 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    <div className='flex items-center gap-2 w-1/2'>
+                        <label className="font-semibold text-sm text-gray-600 pb-1">Product Name</label>
+                        <select
+                            id="productName"
+                            name="productName"
+                            className="px-3 py-2 mt-1 w-3/5 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                        >
+                            <option value=''>select product</option>
+                            {tableData.map((item,index)=>{
+                                return <option key={index} value={item.productName}>{item.productName}</option>
+                            })}
+                        </select>
+                    </div>
+                    <div className='flex items-center gap-2 w-1/2'>
+                        <label className="font-semibold text-sm text-gray-600 pb-1">Supplier Name</label>
+                        <select
+                            id="supplierName"
+                            name="supplierName"
+                            className="px-3 py-2 mt-1 w-3/5 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                        >
+                            <option value=''>select supplier</option>
+                            {tableData.map((item,index)=>{
+                                return <option key={index} value={item.productName}>{item.productName}</option>
+                            })}
+                        </select>
+                    </div>
+                    
                 </div>
-                <div className='flex items-center gap-2 w-full'>
-                    <label className="font-semibold text-sm text-gray-600 pb-1">Supplier Name</label>
-                    <input name="supplierName" id='supplierName' type="text" className="px-3 py-2 mt-1 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-                <div className='flex items-center gap-2 w-full'>
-                    <label className="font-semibold text-sm text-gray-600 pb-1">Date of registration</label>
-                    <input name="dateOfRegistration" id='dateOfRegistration' type="date" className="px-3 py-2 mt-1 text-sm ml-auto w-7/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
+                
+                <div className='flex font-semibold text-sm px-5 items-center'>
 
-            </div>
-            <div className='flex gap-6 font-semibold text-sm px-5 items-center'>
+                    <div className='flex items-center gap-2 w-10/12'>
+                        <label className="font-semibold text-sm text-gray-600 pb-1">Date of registration</label>
+                        <input name="dateOfRegistration" id='dateOfRegistration' type="date" className="px-3 py-2 mt-1 text-sm w-[200px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
 
-                <div className='flex items-center gap-2 w-1/3'>
-                    <label className="font-semibold text-sm text-gray-600 pb-1">Month of warrenty</label>
-                    <input name="monthOfWarrenty" id='monthOfWarrenty' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-                <div className='flex items-center gap-2 w-1/4'>
-                    <label className="font-semibold text-sm text-gray-600 pb-1">Price</label>
-                    <input name="price" id='price' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-full bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-
-                <div className='flex items-center w-full'>
-                    <button type="submit" className='flex p-[8px] rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
-                        Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
-                    </button>
+                    <div className='flex items-center gap-2 w-3/5'>
+                        <label className="font-semibold text-sm text-gray-600 pb-1">Month of warrenty</label>
+                        <input name="monthOfWarrenty" id='monthOfWarrenty' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
+                    <div className='flex items-center gap-2 w-1/2'>
+                        <label className="font-semibold text-sm text-gray-600 pb-1">Price</label>
+                        <input name="price" id='price' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
                 </div>
                 
             </div>
-            
+
+            <div className='mt-7 -ml-16'>
+                <button type="submit" className='flex p-5 rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                    Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
+                </button>
+            </div>
+
         </div>
+
+        
 
         {/* Table */}
         

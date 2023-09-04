@@ -227,7 +227,7 @@ const Customer = () => {
 
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">Enable Portal User <BsFillInfoCircleFill className='text-xl text-gray-600'/></label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-12 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-12 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
 
               <div className='flex items-center gap-2'>
@@ -243,23 +243,23 @@ const Customer = () => {
 
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">SMS Service Enabled</label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">Receive Billing Emails</label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">Receive Marketings Emails</label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">Receive Reports Emails</label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
               <div className='flex items-center gap-2'>
                 <label className="font-semibold flex gap-2 text-sm text-gray-600 pb-1">No Email - Of Any Kind</label>
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 ml-auto mr-[275px] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
               </div>
 
               
