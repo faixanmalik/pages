@@ -55,9 +55,9 @@ const Products = () => {
             </div>
             <div className='flex gap-6 font-semibold text-sm px-5 items-center'>
 
-                <div className='flex items-center gap-2 w-2/5'>
+                <div className='flex items-center gap-2 w-1/3'>
                     <label className="font-semibold text-sm text-gray-600 pb-1">Month of warrenty</label>
-                    <input name="monthOfWarrenty" id='monthOfWarrenty' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-1/3 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    <input name="monthOfWarrenty" id='monthOfWarrenty' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
                 <div className='flex items-center gap-2 w-1/4'>
                     <label className="font-semibold text-sm text-gray-600 pb-1">Price</label>
