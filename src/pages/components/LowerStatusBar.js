@@ -76,7 +76,7 @@ const LowerStatusBar = () => {
   ]
 
   return (
-    <div className='bg-[#333333] flex items-center'>
+    <div className='bg-[#333333] px-16 flex items-center'>
 
       <div className='flex items-center ml-1 px-10'>
 
