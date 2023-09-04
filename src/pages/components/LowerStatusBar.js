@@ -79,6 +79,7 @@ const LowerStatusBar = () => {
     <div className='bg-[#333333] flex items-center'>
 
       <div className='flex items-center ml-1 px-20'>
+        
         {headerItems.map((item, index)=>{
           return  <div key={index} className={`group items-center px-4 py-2 space-y-1 flex-col ${router.pathname === item.link ? 'bg-[#222222]': 'hover:bg-[#444444]'}`}>
             <Link href={item.link} className='cursor-pointer'>
