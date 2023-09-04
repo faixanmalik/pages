@@ -60,7 +60,7 @@ const Customer = () => {
 
 
   return (
-    <div className='bg-[#f7f7f7]'>
+    <div className='bg-[#f7f7f7] px-20'>
 
       <div className='flex items-center'>
         <div className='pl-5 p-[20px] flex flex-1 gap-6 items-center'>
@@ -108,27 +108,27 @@ const Customer = () => {
               <div className='flex items-center gap-2'>
                 <BiSolidUser className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">First Name</label>
-                <input name="firstName" id='firstName' type="text" className="px-3 py-2 mt-1 ml-auto w-9/12 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="firstName" id='firstName' type="text" className="px-3 py-2 mt-1 ml-auto w-8/12 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
               <div className='flex items-center gap-2'>
                 <BiSolidUser className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Last Name</label>
-                <input name="lastName" id='lastName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="lastName" id='lastName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
               <div className='flex items-center gap-2'>
                 <BiSolidBusiness className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Business Name</label>
-                <input name="businessName" id='businessName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="businessName" id='businessName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
               <div className='flex items-center gap-2'>
                 <MdEmail className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Email</label>
-                <input name="email" id='email' type="email" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="email" id='email' type="email" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
@@ -139,13 +139,13 @@ const Customer = () => {
                   <select
                     id="countryCode"
                     name="countryCode"
-                    className="px-3 py-2 mt-1 mb-4 w-[100px] text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                    className="px-3 py-2 mt-1 mb-4 w-[75px] text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                   >
                     {mainCountryCodes.map((item,index)=>{
                       return <option key={index} value={item}>{item}</option>
                     })}
                   </select>
-                  <input name="phoneNo" id='phoneNo' type="number" className="w-[325px] px-3 py-2 mt-1 mb-4 text-sm  bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <input name="phoneNo" id='phoneNo' type="number" className="w-[250px] px-3 py-2 mt-1 mb-4 text-sm  bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                 </div>
               </div>
@@ -162,34 +162,34 @@ const Customer = () => {
               <div className='flex items-center gap-2'>
                 <FaLocationDot className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Address Line 1</label>
-                <input name="addressLine1" id='addressLine1' type="text" placeholder='123 Main Street Apt 203' className="px-3 py-2 mt-1 ml-auto w-9/12 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="addressLine1" id='addressLine1' type="text" placeholder='123 Main Street Apt 203' className="px-3 py-2 mt-1 ml-auto w-8/12 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
               <div className='flex items-center gap-2'>
                 <FaLocationDot className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Address Line 2</label>
-                <input name="addressLine2" id='addressLine2' type="text" placeholder='New York City New York 10001 United States' className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="addressLine2" id='addressLine2' type="text" placeholder='New York City New York 10001 United States' className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
               <div className='flex items-center gap-2'>
                 <FaLocationDot className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">City</label>
-                <input name="city" id='city' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="city" id='city' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
               <div className='flex items-center gap-2'>
                 <FaLocationDot className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">State/Country</label>
-                <input name="stateOrCountry" id='stateOrCountry' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="stateOrCountry" id='stateOrCountry' type="text" className="px-3 py-2 mt-1 mb-4 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
 
               <div className='flex items-center gap-2'>
                 <FaLocationDot className='text-xl text-gray-600'/>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Zip/Postal Code</label>
-                <input name="zipCode" id='zipCode' type="number" className="px-3 py-2 mt-1 text-sm ml-auto w-9/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <input name="zipCode" id='zipCode' type="number" className="px-3 py-2 mt-1 text-sm ml-auto w-8/12 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
 
               <div className='group flex justify-end my-3'>
@@ -202,7 +202,7 @@ const Customer = () => {
                 <select
                   id="referedBy"
                   name="referedBy"
-                  className="px-3 py-2 mt-1 mb-4 ml-auto w-9/12 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                  className="px-3 py-2 mt-1 mb-4 ml-auto w-8/12 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                 >
                   {referedBy.map((item,index)=>{
                     <option value={''}>select refered by</option>
