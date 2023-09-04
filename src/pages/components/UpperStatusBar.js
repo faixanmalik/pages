@@ -11,7 +11,7 @@ const UpperStatusBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='bg-[#222222] p-[6px] px-20 flex items-center'>
+    <div className='bg-[#222222] p-[6px] px-20 2xl:px-40 flex items-center'>
 
       <div className='pl-10 flex flex-1 gap-6 items-center'>
         <h1 className='text-white font-semibold'>{headerText}</h1>
