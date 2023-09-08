@@ -151,23 +151,17 @@ const Invoices = () => {
             </div>
 
             <div className='flex space-x-3 justify-between items-center'>
-
-              
-
               <div className='flex items-center ml-auto'>
                   <button type="submit" className='flex p-[8px] px-3 items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
                     <BsFillCheckCircleFill className='text-sm'/>
                       Create Ticket
                   </button>
               </div>
-
             </div>
 
             
           </div>
         </div>
-
-
       </div>
     </div>
   )
