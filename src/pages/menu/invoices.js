@@ -128,12 +128,7 @@ const Invoices = () => {
               </div>
             </div>
 
-            <div className=''>
-              <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-            </div>
-
-            <div className='flex space-x-3 justify-between items-center'>
-
+            <div className='flex items-center justify-between'>
               <div className='flex items-center'>
                 <label className="font-semibold w-40 text-sm text-gray-600 pb-1">Data Type</label>
                 <select
@@ -146,8 +141,20 @@ const Invoices = () => {
                   })}
                 </select>
               </div>
+              <div>
+                <input readOnly placeholder='warrenty' name="warrenty " id='warrenty' type="number" className="cursor-not-allowed px-3 py-2 ml-6 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+              </div>
+            </div>
 
-              <div className='flex items-center'>
+            <div className=''>
+              <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+            </div>
+
+            <div className='flex space-x-3 justify-between items-center'>
+
+              
+
+              <div className='flex items-center ml-auto'>
                   <button type="submit" className='flex p-[8px] px-3 items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
                     <BsFillCheckCircleFill className='text-sm'/>
                       Create Ticket
