@@ -4,7 +4,7 @@ import {BiSolidBusiness, BiSolidUser} from 'react-icons/bi'
 import {TbHelpHexagonFilled} from 'react-icons/tb'
 import { FaPlus } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { AiFillPhone } from 'react-icons/ai'
+import { AiFillPhone, AiOutlineCamera } from 'react-icons/ai'
 import { FaLocationDot } from 'react-icons/fa6'
 
 const Invoices = () => {
@@ -91,7 +91,7 @@ const Invoices = () => {
 
               <div className='flex space-x-3 justify-between items-center'>
 
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2 w-96'>
                   <label className="font-semibold w-20 text-sm text-gray-600 pb-1">Techantion</label>
                   <input placeholder='John Doe' name="techantion " id='techantion' type="number" className="px-3 py-2 ml-6 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
@@ -110,6 +110,7 @@ const Invoices = () => {
                     })}
                   </select>
                 </div>
+                
 
 
                 <div className='flex items-center'>
@@ -129,30 +130,41 @@ const Invoices = () => {
             </div>
 
             <div className='flex items-center justify-between'>
-              <div className='flex items-center'>
-                <label className="font-semibold w-40 text-sm text-gray-600 pb-1">Data Type</label>
+              <div className='flex items-center gap-3'>
+                <label className="font-semibold w-20 text-sm text-gray-600 pb-1">Data Type</label>
                 <select
                   id="dataType"
                   name="dataType"
-                  className="px-3 py-2 mt-1 mb-4 text-sm w-full bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                  className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                 >
                   {dataType.map((item,index)=>{
                     return <option key={index} value={item}>{item}</option>
                   })}
                 </select>
               </div>
+              <div className='flex items-center gap-2'>
+                  <label className="font-semibold  text-sm text-gray-600 pb-1">Title or short description</label>
+                  <input placeholder='title or short description' name="shortDesc " id='techantion' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                </div>
               <div>
                 <input readOnly placeholder='warrenty' name="warrenty " id='warrenty' type="number" className="cursor-not-allowed px-3 py-2 ml-6 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
               </div>
             </div>
+            
 
             <div className=''>
               <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
             </div>
 
             <div className='flex space-x-3 justify-between items-center'>
+              <button type="submit" className='flex p-[8px] px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                {/* <AiOutlineCamera className='text-4xl text-[#ee8e00]'/> */}
+                <AiOutlineCamera className='text-3xl'/>
+                Open Camera
+              </button>
+
               <div className='flex items-center ml-auto'>
-                  <button type="submit" className='flex p-[8px] px-3 items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
+                  <button type="submit" className='flex p-[8px] px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
                     <BsFillCheckCircleFill className='text-sm'/>
                       Create Ticket
                   </button>
