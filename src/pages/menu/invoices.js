@@ -1,11 +1,6 @@
 import React from 'react'
-import {BsFillArrowRightCircleFill, BsFillCheckCircleFill, BsFillInfoCircleFill} from 'react-icons/bs'
-import {BiSolidBusiness, BiSolidUser} from 'react-icons/bi'
-import {TbHelpHexagonFilled} from 'react-icons/tb'
-import { FaPlus } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import { AiFillPhone, AiOutlineCamera } from 'react-icons/ai'
-import { FaLocationDot } from 'react-icons/fa6'
+import {BsFillCheckCircleFill} from 'react-icons/bs'
+import { AiOutlineCamera } from 'react-icons/ai'
 
 const Invoices = () => {
 
@@ -153,17 +148,9 @@ const Invoices = () => {
                     <input type="time" name="time" id="time" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
                   </div>
                 </div>
-
-              
-
-
-              
-
             </div>
 
             
-            
-
             <div className=''>
               <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
             </div>
