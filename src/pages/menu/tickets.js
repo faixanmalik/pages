@@ -37,7 +37,7 @@ const Tickets = () => {
 
             <div className='w-full space-y-3 items-center'>
 
-              <div className='flex justify-between'>
+              <div className='flex my-6 justify-between'>
 
                 <div className='flex flex-col w-[130px]'>
                   <label className="font-semibold text-sm text-gray-600 pb-1">Auto Numerator</label>
@@ -45,16 +45,25 @@ const Tickets = () => {
                 </div>
 
 
-                <div className='flex space-x-3 items-center w-[200px]'>
-                  <label className="font-semibold text-sm text-gray-600 pb-1">Set Printing</label>
-                  <label className="font-semibold text-sm text-gray-600 pb-1">1</label>
-                  <input checked id="checked-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                  <label className="font-semibold text-sm text-gray-600 pb-1">2</label>
-                  <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                <div className='flex flex-col'>
+                  <div className='flex flex-col'>
+                    <div className='flex space-x-3'>
+                      <input type="date" name="date" id="date" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
+                      <input type="time" name="time" id="time" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
+                    </div>
+                  </div>
+
+                  <div className='flex flex-col'>
+                    <div className='flex space-x-3 items-center ml-auto mr-5'>
+                      <label className="font-semibold text-sm text-gray-600 pb-1">Set Printing</label>
+                      <label className="font-semibold text-sm text-gray-600 pb-1">1</label>
+                      <input checked id="checked-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                      <label className="font-semibold text-sm text-gray-600 pb-1">2</label>
+                      <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                    </div>
+
+                  </div>
                 </div>
-
-               
-
               </div>
 
 
@@ -117,13 +126,7 @@ const Tickets = () => {
                 </div>
 
                 
-                <div className='flex flex-col w-1/2'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">Date/Time</label>
-                  <div className='flex space-x-3'>
-                    <input type="date" name="date" id="date" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
-                    <input type="time" name="time" id="time" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
-                  </div>
-                </div>
+                
 
               </div>
             </div>
