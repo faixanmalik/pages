@@ -1,5 +1,6 @@
 import React from 'react'
 import {BsCameraFill, BsFillCheckCircleFill} from 'react-icons/bs'
+import { AiOutlineCamera } from 'react-icons/ai'
 
 const Tickets = () => {
 
@@ -186,22 +187,27 @@ const Tickets = () => {
 
             
             <div className=''>
-              <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+              <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+            </div>
+
+
+            <div className='flex space-x-3 mb-10 items-center'>
+              <BsCameraFill className='text-6xl text-black'/>
+              <BsCameraFill className='text-6xl text-black'/>
+              <BsCameraFill className='text-6xl text-black'/>
             </div>
 
             <div className='flex space-x-3 justify-between items-center'>
-              <div className='flex space-x-2'>
-                <BsCameraFill className='text-6xl text-black'/>
-                <BsCameraFill className='text-6xl text-black'/>
-                <BsCameraFill className='text-6xl text-black'/>
-              </div>
-             
+              <button type="submit" className='flex p-[7px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                <AiOutlineCamera className='text-xl'/>
+                Open Camera
+              </button>
 
               <div className='flex items-center ml-auto'>
-                <button type="submit" className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
-                  <BsFillCheckCircleFill className='text-sm'/>
-                    Create Ticket
-                </button>
+                  <button type="submit" className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                    <BsFillCheckCircleFill className='text-sm'/>
+                      Create Ticket
+                  </button>
               </div>
             </div>
 
