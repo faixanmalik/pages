@@ -24,6 +24,11 @@ const LowerStatusBar = () => {
       link: '/menu/products'
     },
     {
+      title: 'Tickets',
+      icon: BsFillTagFill,
+      link: '/menu/tickets'
+    },
+    {
       title: 'Invoices',
       icon: RiBillLine,
       link: '/menu/invoices'
@@ -32,11 +37,6 @@ const LowerStatusBar = () => {
       title: 'Estimates',
       icon: FaFileInvoice,
       link: '/menu/estimates'
-    },
-    {
-      title: 'Tickets',
-      icon: BsFillTagFill,
-      link: '/menu/tickets'
     },
     {
       title: 'Parts',
