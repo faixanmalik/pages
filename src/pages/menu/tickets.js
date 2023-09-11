@@ -54,7 +54,7 @@ const Tickets = () => {
                   </div>
 
                   <div className='flex flex-col'>
-                    <div className='flex space-x-3 items-center ml-auto mr-5'>
+                    <div className='flex space-x-3 items-center ml-auto'>
                       <label className="font-semibold text-sm text-gray-600 pb-1">Set Printing</label>
                       <label className="font-semibold text-sm text-gray-600 pb-1">1</label>
                       <input readOnly checked id="checked-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
@@ -69,12 +69,12 @@ const Tickets = () => {
 
               <div className='flex space-x-5 justify-between'>
 
-                <div className='flex flex-col w-1/6'>
+                <div className='flex flex-col w-[130px]'>
                   <label className="font-semibold text-sm text-left text-gray-600 pb-1">Product Number</label>
                   <input placeholder='1234567890' name="productNumber" id='productNumber' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
 
-                <div className='flex flex-col w-1/6'>
+                <div className='flex flex-col w-[130px]'>
                   <label className="font-semibold w-52 text-sm text-gray-600 pb-1">Customer Phone No</label>
                   <select
                     id="customerPhone"
@@ -87,12 +87,12 @@ const Tickets = () => {
                   </select>
                 </div>
 
-                <div className='flex flex-col w-[130px]'>
+                <div className='flex flex-col w-1/6'>
                   <label className="font-semibold text-sm text-left text-gray-600 pb-1">First Name</label>
                   <input placeholder='John' name="firstName" id='firstName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
 
-                <div className='flex flex-col w-[130px]'>
+                <div className='flex flex-col w-1/6'>
                   <label className="font-semibold text-sm text-left text-gray-600 pb-1">Last Name</label>
                   <input placeholder='Doe' name="lastName" id='lastName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
