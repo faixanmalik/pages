@@ -1,29 +1,36 @@
 import React from 'react'
 import {BsCameraFill, BsFillCheckCircleFill} from 'react-icons/bs'
-import { AiOutlineCamera } from 'react-icons/ai'
+
+import { Fragment, useRef, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
 const Tickets = () => {
 
-    let referedBy = [
-        'Person 1',
-        'Person 2',
-        'Person 3',
-        'Person 4',
-        'Person 5'
-    ]
+  let referedBy = [
+    'Person 1',
+    'Person 2',
+    'Person 3',
+    'Person 4',
+    'Person 5'
+  ]
   
-    let products = [
-      'Computer',
-      'Laptop',
-      'Phone',
-      'Fax',
-      'Machine',
-    ]
+  let products = [
+    'Computer',
+    'Laptop',
+    'Phone',
+    'Fax',
+    'Machine',
+  ]
   
-    let dataType = [
-      'have important data',
-      'not have important data',
-    ]
+  let dataType = [
+    'have important data',
+    'not have important data',
+  ]
+
+  const [open, setOpen] = useState(false)
+
+  const cancelButtonRef = useRef(null)
 
   return (
      <div className='bg-[#f7f7f7] px-10'>
@@ -39,9 +46,9 @@ const Tickets = () => {
 
               <div className='flex my-6 justify-between'>
 
-                <div className='flex flex-col w-[130px]'>
-                  <label className="font-semibold text-sm text-gray-600 pb-1">Auto Numerator</label>
-                  <input readOnly placeholder='12345' name="autoNumerator" id='autoNumerator' type="number" className="cursor-not-allowed px-3 py-2 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <div className='flex flex-col -mt-4 w-[130px]'>
+                  <label className="font-bold text-sm text-gray-600 pb-1">Auto Numerator</label>
+                  <input readOnly placeholder='12345' name="autoNumerator" id='autoNumerator' type="number" className="cursor-not-allowed placeholder:font-bold px-3 py-2 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
 
 
@@ -191,23 +198,72 @@ const Tickets = () => {
             </div>
 
 
-            <div className='flex space-x-3 mb-10 items-center'>
-              <BsCameraFill className='text-6xl text-black'/>
-              <BsCameraFill className='text-6xl text-black'/>
-              <BsCameraFill className='text-6xl text-black'/>
-            </div>
+            
 
             <div className='flex space-x-3 justify-between items-center'>
-              <button type="submit" className='flex p-[7px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
-                <AiOutlineCamera className='text-xl'/>
-                Open Camera
-              </button>
-
+              <div className='flex space-x-3 items-center'>
+                <BsCameraFill className='text-6xl text-black'/>
+                <BsCameraFill className='text-6xl text-black'/>
+                <BsCameraFill className='text-6xl text-black'/>
+              </div>
               <div className='flex items-center ml-auto'>
-                  <button type="submit" className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+            
+                  <button type="submit" onClick={()=>setOpen(true)} className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
                     <BsFillCheckCircleFill className='text-sm'/>
                       Create Ticket
                   </button>
+
+                  <Transition.Root show={open} as={Fragment}>
+                    <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+                      <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                      >
+                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                      </Transition.Child>
+
+                      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                        <div className="flex min-h-full items-end justify-end p-4 sm:p-0">
+                          <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            enterTo="opacity-100 translate-y-0 sm:scale-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                          >
+                            <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:mb-20 sm:mr-24 sm:w-full sm:max-w-[250px]">
+                              <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                                <div className="sm:flex sm:items-start">
+                                  
+                                  <div className="flex flex-col w-full space-y-4 mt-3 text-center sm:mt-0 sm:text-left">
+                                    <button type="submit" className='w-full flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                                      <BsFillCheckCircleFill className='text-xs'/>
+                                        No Print
+                                    </button>
+                                    <button type="submit" className='w-full flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                                      <BsFillCheckCircleFill className='text-xs'/>
+                                        Print Techantion copy
+                                    </button>
+                                    <button type="submit" className='w-full text-start flex p-[8px] rounded-md px-3 items-center bg-[#ee8e00] text-white cursor-pointer'>
+                                      <BsFillCheckCircleFill className='text-xl mr-2'/>
+                                        Print Techantion & customer copy
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </Dialog.Panel>
+                          </Transition.Child>
+                        </div>
+                      </div>
+                    </Dialog>
+                  </Transition.Root>
               </div>
             </div>
 
