@@ -158,8 +158,8 @@ const Products = () => {
                         <label className="font-semibold text-sm text-left text-gray-600 pb-1">Price</label>
                         <input placeholder='$9999' name="price" id='price' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                     </div>
-                    <div className='items-center w-1/4'>
-                        <button type="submit" className='flex py-3 rounded-md px-6 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                    <div className='items-baseline mt-2 w-1/4'>
+                        <button type="submit" className='flex py-2 rounded-md px-6 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
                             Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
                         </button>
                     </div>
