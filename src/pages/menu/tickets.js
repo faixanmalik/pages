@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BsCameraFill, BsFillCheckCircleFill} from 'react-icons/bs'
 
 import { Fragment, useRef, useState } from 'react'
@@ -8,11 +8,13 @@ import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 const Tickets = () => {
 
   let referedBy = [
-    'Person 1',
-    'Person 2',
-    'Person 3',
-    'Person 4',
-    'Person 5'
+    {name: 'faizan malik'},
+    {name: 'Yousef'},
+    {name: 'Ramzan Bhi'},
+    {name: 'Clerk'},
+    {name: 'Bhovaan Bam'},
+    {name: 'Shahruk Khan'},
+    {name: 'Salman Khan'},
   ]
   
   let products = [
@@ -27,10 +29,24 @@ const Tickets = () => {
     'have important data',
     'not have important data',
   ]
+  const cancelButtonRef = useRef(null)
 
   const [open, setOpen] = useState(false)
+  const [openCustomerPhone, setOpenCustomerPhone] = useState(false)
+  const [search, setSearch] = useState('')
+  const [personList, setPersonList] = useState(referedBy)
+  
+  
 
-  const cancelButtonRef = useRef(null)
+  const handleChange = (e)=>{
+    if(e.target.name === 'search'){
+      setSearch(e.target.value);
+    }
+  }
+
+  const filteredData = personList.filter((item)=>{
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  });
 
   return (
      <div className='bg-[#f7f7f7] px-10'>
@@ -73,15 +89,68 @@ const Tickets = () => {
 
                 <div className='flex flex-col w-[130px]'>
                   <label className="font-semibold w-52 text-sm text-gray-600 pb-1">Customer Phone No</label>
-                  <select
-                    id="customerPhone"
-                    name="customerPhone"
-                    className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
-                  >
-                    {referedBy.map((item,index)=>{
-                      return <option key={index} value={item}>{item}</option>
-                    })}
-                  </select>
+                  <button onClick={()=> setOpenCustomerPhone(true)} type="submit" className='py-2 text-left pl-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-400 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out'>
+                    123456789
+                  </button>
+                  
+                  <Transition.Root show={openCustomerPhone} as={Fragment}>
+                    <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpenCustomerPhone}>
+                      <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                      >
+                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                      </Transition.Child>
+
+                      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                          <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            enterTo="opacity-100 translate-y-0 sm:scale-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                          >
+                            <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+
+
+                              <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                                {/* <div className="flex justify-center">
+                                    <input placeholder='1234567890' id='default-search' type="search" className="w-full px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg transition-colors duration-200 ease-in-out" />
+                                </div> */}
+
+                                <div className="relative">
+                                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                        </svg>
+                                    </div>
+                                    <input value={search} onChange={handleChange} type="text" id="search" name='search' className="block w-full p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search Customer..." required/>
+                                </div>
+                                <div>
+                                  <ul className='flex flex-col space-y-3 mt-5'>
+                                    {filteredData.map((item,index)=>{
+                                      return <li key={index} value={item} className='text-black ml-2'>{item.name}</li>
+                                    })}
+                                  </ul>
+                                </div>
+                              </div>
+
+                             
+                            </Dialog.Panel>
+                          </Transition.Child>
+                        </div>
+                      </div>
+                    </Dialog>
+                  </Transition.Root>
+
                 </div>
 
                 <div className='flex flex-col w-1/6'>
