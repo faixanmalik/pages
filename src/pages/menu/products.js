@@ -84,18 +84,18 @@ const Products = () => {
   return (
     <div className='bg-[#f7f7f7] min-h-screen pb-1 px-20 2xl:px-40'>
 
-        <div className='flex items-center px-10'>
+        <div className='flex space-x-5 px-10 items-center'>
     
-            <div className='items-center pt-5 flex-col w-full'>
+            <div className='flex flex-col w-10/12 mt-5 justify-between'>
 
-                <div className='flex font-semibold w-full text-sm px-5 items-center'>
+                <div className='flex space-x-4'>
 
-                    <div className='flex items-center gap-2 w-1/2'>
-                        <label className="font-semibold text-sm text-gray-600 pb-1">Product Name</label>
+                    <div className='flex flex-col w-1/2'>
+                        <label className="font-semibold text-sm text-left text-gray-600 pb-1">Product Name</label>
                         <select
                             id="productName"
                             name="productName"
-                            className="px-3 py-2 mt-1 w-3/5 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                            className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                         >
                             <option value=''>select product</option>
                             {tableData.map((item,index)=>{
@@ -103,12 +103,12 @@ const Products = () => {
                             })}
                         </select>
                     </div>
-                    <div className='flex items-center gap-2 w-1/2'>
-                        <label className="font-semibold text-sm text-gray-600 pb-1">Supplier Name</label>
+                    <div className='flex flex-col w-1/2'>
+                        <label className="font-semibold text-sm text-left text-gray-600 pb-1">Supplier Name</label>
                         <select
                             id="supplierName"
                             name="supplierName"
-                            className="px-3 py-2 mt-1 w-3/5 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                            className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                         >
                             <option value=''>select supplier</option>
                             {tableData.map((item,index)=>{
@@ -116,33 +116,38 @@ const Products = () => {
                             })}
                         </select>
                     </div>
-                    
-                </div>
-                
-                <div className='flex font-semibold text-sm px-5 items-center'>
 
-                    <div className='flex items-center gap-2 w-10/12'>
-                        <label className="font-semibold text-sm text-gray-600 pb-1">Date of registration</label>
-                        <input name="dateOfRegistration" id='dateOfRegistration' type="date" className="px-3 py-2 mt-1 text-sm w-[200px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                </div>
+                <div className='flex space-x-4'>
+
+                    <div className='flex flex-col w-1/2'>
+                        <label className="font-semibold text-sm text-left text-gray-600 pb-1">Date of registration</label>
+                        <input name="dateOfRegistration" id='dateOfRegistration' type="date" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
+                    <div className='flex flex-col w-1/2'>
+                        <label className="font-semibold text-sm text-left text-gray-600 pb-1">Month of warrenty</label>
+                        <input placeholder='18' name="monthOfWarrenty" id='monthOfWarrenty' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
+                    <div className='flex flex-col w-1/2'>
+                        <label className="font-semibold text-sm text-left text-gray-600 pb-1">Price</label>
+                        <input placeholder='$9999' name="price" id='price' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                     </div>
 
-                    <div className='flex items-center gap-2 w-3/5'>
-                        <label className="font-semibold text-sm text-gray-600 pb-1">Month of warrenty</label>
-                        <input name="monthOfWarrenty" id='monthOfWarrenty' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                    </div>
-                    <div className='flex items-center gap-2 w-1/2'>
-                        <label className="font-semibold text-sm text-gray-600 pb-1">Price</label>
-                        <input name="price" id='price' type="text" className="px-3 py-2 mt-1 text-sm ml-1 w-[110px] bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                    </div>
-                </div>
-                
+                </div> 
+
             </div>
-
-            <div className='mt-7 -ml-16'>
-                <button type="submit" className='flex p-5 rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                
+            <div className='items-center mt-4'>
+                <button type="submit" className='flex py-10 rounded-md px-6 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
                     Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
                 </button>
             </div>
+
+            {/* <div className='mt-7 -ml-16'>
+                <button type="submit" className='flex p-5 rounded-md px-5 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                    Start <BsFillArrowRightCircleFill className='text-sm mt-1'/>
+                </button>
+            </div> */}
 
         </div>
 
