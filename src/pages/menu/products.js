@@ -151,10 +151,10 @@ const Products = () => {
                                         <div className='mt-5'>
                                         
                                             {filteredData.map((item,index)=>{
-                                                return <option key={index} value={item.productName} className='text-black hover:bg-slate-100 p-3 flex flex-col'>{item.productName}</option>
+                                                return <option key={index} value={item.productName} className={`text-black p-1 flex flex-col bg-${index % 2 === 0 ? 'gray-100' : 'white'} `}>{item.productName}</option>
                                             })}
                                             
-                                            <div className='flex mt-5 px-3 space-x-3 items-center justify-center'>
+                                            <div className='flex mt-3 space-x-3 items-center'>
                                                 <button type="submit" className=' py-1 mt-3 rounded-xl px-5 text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>New</button>
                                                 <button type="submit" className=' py-1 mt-3 rounded-xl px-5 text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>Update</button>
                                                 <button type="submit" className=' py-1 mt-3 rounded-xl px-5 text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>Delete</button>
