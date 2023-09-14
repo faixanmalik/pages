@@ -112,8 +112,20 @@ const Products = () => {
         }
     }
 
-    const filteredData = data.filter((item)=>{
+    const filteredProductName = data.filter((item)=>{
         return item.productName.toLowerCase().includes(search.toLowerCase());
+    });
+
+    const filteredSubProductName = data.filter((item)=>{
+        return item.subProduct.toLowerCase().includes(search.toLowerCase());
+    });
+
+    const filteredManufacturer = data.filter((item)=>{
+        return item.manufacturer.toLowerCase().includes(search.toLowerCase());
+    });
+
+    const filteredSupplier = data.filter((item)=>{
+        return item.supplierName.toLowerCase().includes(search.toLowerCase());
     });
 
     let currencyList = [
@@ -177,7 +189,7 @@ const Products = () => {
                                         </div>
                                         <div className='mt-5'>
                                         
-                                            {filteredData.map((item,index)=>{
+                                            {filteredProductName.map((item,index)=>{
                                                 return <option key={index} value={item.productName} className={`text-black p-1 flex flex-col bg-${index % 2 === 0 ? 'gray-100' : 'white'} `}>{item.productName}</option>
                                             })}
                                             
@@ -245,7 +257,7 @@ const Products = () => {
                                         </div>
                                         <div className='mt-5'>
                                         
-                                            {filteredData.map((item,index)=>{
+                                            {filteredSubProductName.map((item,index)=>{
                                                 return <option key={index} value={item.subProduct} className={`text-black p-1 flex flex-col bg-${index % 2 === 0 ? 'gray-100' : 'white'} `}>{item.subProduct}</option>
                                             })}
                                             
@@ -313,7 +325,7 @@ const Products = () => {
                                         </div>
                                         <div className='mt-5'>
                                         
-                                            {filteredData.map((item,index)=>{
+                                            {filteredManufacturer.map((item,index)=>{
                                                 return <option key={index} value={item.manufacturer} className={`text-black p-1 flex flex-col bg-${index % 2 === 0 ? 'gray-100' : 'white'} `}>{item.manufacturer}</option>
                                             })}
                                             
@@ -381,7 +393,7 @@ const Products = () => {
                                         </div>
                                         <div className='mt-5'>
                                         
-                                            {filteredData.map((item,index)=>{
+                                            {filteredSupplier.map((item,index)=>{
                                                 return <option key={index} value={item.supplierName} className={`text-black p-1 flex flex-col bg-${index % 2 === 0 ? 'gray-100' : 'white'} `}>{item.supplierName}</option>
                                             })}
                                             
