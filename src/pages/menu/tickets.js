@@ -177,7 +177,7 @@ const Tickets = () => {
               
 
 
-              <div className='flex space-x-5 justify-between items-center'>
+              <div className='flex w-10/12 space-x-5 items-center'>
 
               
                 <div className='flex flex-col w-1/3'>
@@ -188,12 +188,6 @@ const Tickets = () => {
                 <div className='flex flex-col w-1/3'>
                   <label className="font-semibold text-sm text-gray-600 pb-1">Warrenty</label>
                   <input readOnly placeholder='warrenty' name="warrenty " id='warrenty' type="number" className="cursor-not-allowed px-3 py-2 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-
-
-                <div className='flex flex-col w-1/3'>
-                  {/* <label className="font-semibold text-sm text-gray-600 pb-1">Warrenty</label>
-                  <input placeholder='warrenty' name="warrenty " id='warrenty' type="number" className="cursor-not-allowed px-3 py-2 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" /> */}
                 </div>
                 
 
