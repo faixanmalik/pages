@@ -224,7 +224,7 @@ const Tickets = () => {
                         <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.status}</span>
                     </td>
                     <td className="py-3">
-                        <span className='bg-red-600 text-white flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
+                        <span className='bg-red-600 text-white font-semibold flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
                     </td>
                     <td className="px-6 py-3">
                         {item.created}
