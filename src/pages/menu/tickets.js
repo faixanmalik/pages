@@ -229,8 +229,8 @@ const Tickets = () => {
                     <td className="px-6 py-3">
                         {item.created}
                     </td>
-                    <td className="px-6 py-3">
-                        {item.issue}
+                    <td className="p-3">
+                        <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.issue}</span>
                     </td>
                   </tr>})}
 
