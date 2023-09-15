@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import { React, useState } from 'react'
 import { AiOutlineUnorderedList, AiTwotoneSetting } from 'react-icons/ai';
 import { BiPlusMedical, BiSolidHelpCircle } from 'react-icons/bi';
-import { BsAspectRatio } from 'react-icons/bs';
+import { BsAspectRatio, BsInfoCircle, BsInfoCircleFill } from 'react-icons/bs';
 import { FiFilter } from 'react-icons/fi';
 import { LuSettings2 } from 'react-icons/lu';
 
@@ -79,10 +80,10 @@ const Tickets = () => {
 
             <div className='flex w-full justify-end items-center space-x-5'>
 
-              <button type="submit" className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
+              <Link href={'/menu/createTicket'} className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
                 <BiPlusMedical/>
                 New Ticket
-              </button>
+              </Link>
 
               <button type="submit" className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-gray-500 text-white cursor-pointer'>
                 <AiOutlineUnorderedList/>
@@ -177,25 +178,25 @@ const Tickets = () => {
                         <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                       </div>
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Sr.
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Customer
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Subject
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Status
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Last Updated
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Created
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Issue
                     </th>
                   </tr>
@@ -205,30 +206,30 @@ const Tickets = () => {
                   
                   {tableData.map((item, index)=>{
                     return <tr key={index} className="bg-white border-b hover:bg-gray-50">
-                    <td className="w-4 p-4">
+                    <td className="w-4 p-3">
                       <div className="flex items-center">
                         <input id="checkbox-table-search-1" type="checkbox" onChange={e => handleRowCheckboxChange(e, item._id)} className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                       </div>
                     </td>
-                    <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                         {item.id}
                     </td>
-                    <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                         {item.customer}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-3">
                         {item.subject}
                     </td>
-                    <td className="px-6 py-4">
-                        {item.status}
+                    <td className="p-3">
+                        <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.status}</span>
                     </td>
-                    <td className="px-6 py-4">
-                        {item.lastUpdated}
+                    <td className="py-3">
+                        <span className='bg-red-600 text-white flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-3">
                         {item.created}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-3">
                         {item.issue}
                     </td>
                   </tr>})}
