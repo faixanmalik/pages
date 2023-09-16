@@ -221,7 +221,16 @@ const Tickets = () => {
                         {item.subject}
                     </td>
                     <td className="p-3">
-                        <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.status}</span>
+                        {/* <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.status}</span> */}
+                        <select
+                          id="statusIs"
+                          name="statusIs"
+                          className="border border-gray-200 px-2 rounded-md py-1 bg-gray-50 transition-colors duration-200 ease-in-out"
+                        >
+                          {status.map((item,index)=>{
+                            return <option key={index} value={item}>{item}</option>
+                          })}
+                      </select>
                     </td>
                     <td className="py-3">
                         <span className='bg-red-600 text-white font-semibold flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
@@ -230,7 +239,7 @@ const Tickets = () => {
                         {item.created}
                     </td>
                     <td className="p-3">
-                        <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.issue}</span>
+                        <span className='border border-gray-200 rounded-md px-3 py-1 bg-gray-50'>{item.issue}</span>
                     </td>
                   </tr>})}
 
