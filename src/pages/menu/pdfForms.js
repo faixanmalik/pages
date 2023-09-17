@@ -124,7 +124,7 @@ const PdfForms = () => {
 
             <div className='w-1/4 mx-auto'>
                 <h1 className='text-black text-center font-semibold text-lg'>Customer Signature</h1>
-                <div className='w-full h-20 border-2 border-gray-600'></div>
+                <div className='w-full h-20 border border-gray-600'></div>
             </div>
 
         </div>
