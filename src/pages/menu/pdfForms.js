@@ -1,49 +1,8 @@
-import {BsCameraFill, BsFillCheckCircleFill} from 'react-icons/bs'
-import { React, Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { React } from 'react'
 
 
 const PdfForms = () => {
 
-    let referedBy = [
-        {name: 'faizan malik'},
-        {name: 'Yousef'},
-        {name: 'Ramzan Bhi'},
-        {name: 'Clerk'},
-        {name: 'Bhovaan Bam'},
-        {name: 'Shahruk Khan'},
-        {name: 'Salman Khan'},
-    ]
-      
-    let products = [
-    'Computer',
-    'Laptop',
-    'Phone',
-    'Fax',
-    'Machine',
-    ]
-      
-    let dataType = [
-    'have important data',
-    'not have important data',
-    ]
-
-    const cancelButtonRef = useRef(null)
-
-    const [open, setOpen] = useState(false)
-    const [openCustomerPhone, setOpenCustomerPhone] = useState(false)
-    const [search, setSearch] = useState('')
-    const [personList, setPersonList] = useState(referedBy)
-      
-    const handleChange = (e)=>{
-        if(e.target.name === 'search'){
-            setSearch(e.target.value);
-        }
-    }
-    
-    const filteredData = personList.filter((item)=>{
-        return item.name.toLowerCase().includes(search.toLowerCase());
-    });
       
   return (
     <div className='bg-[#f7f7f7] px-10'>
