@@ -48,7 +48,7 @@ const PdfForms = () => {
   return (
     <div className='bg-[#f7f7f7] px-10'>
 
-    <div className='bg-white text-[#8F8F8F] min-h-screen mx-5 rounded-md'>
+    <div className='bg-white pb-10 text-[#8F8F8F] min-h-screen mx-5 rounded-md'>
 
         {/* Customer Info */}
       <div className='py-1 px-5'>
