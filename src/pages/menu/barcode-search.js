@@ -47,43 +47,43 @@ const BarcodeSearch = () => {
 
                 <div className='flex space-y-5 flex-col'>
 
-                    <div class="flex">
-                        <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
+                    <div className="flex">
+                        <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
                             <BsSearch className='text-lg mt-1'/>
                         </span>
                         <input placeholder="Search..." value={search} onChange={handleChange} type="text" id="search" name='search' className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5 "  required/>
                     </div>
 
-                    <div class="flex">
-                        <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
+                    <div className="flex">
+                        <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
                             <MdOutlineNumbers className='text-lg mt-1'/>
                         </span>
-                        <input placeholder='Product Name' type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
+                        <input placeholder='Product Name' type="text" id="website-admin" className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
                     </div>
 
                     
                     <div className='flex space-x-3'>
 
-                        <div class="flex w-full">
-                            <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
+                        <div className="flex w-full">
+                            <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
                                 <AiOutlineUser className='text-lg mt-1'/>
                             </span>
-                            <input placeholder='Supplier Name' type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
+                            <input placeholder='Supplier Name' type="text" id="website-admin" className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
                         </div>
 
-                        <div class="flex w-full">
-                            <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
+                        <div className="flex w-full">
+                            <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
                                 <BsTelephone className='text-lg mt-1'/>
                             </span>
-                            <input placeholder='Supplier No' type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
+                            <input placeholder='Supplier No' type="text" id="website-admin" className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5"/>
                         </div>
 
 
                     </div>
 
                     <div className='flex space-x-3'>
-                        <div class="flex w-full">
-                            <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
+                        <div className="flex w-full">
+                            <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
                                 <BsCalendarDate className='text-lg mt-1'/>
                             </span>
                             <input type="date" name="date" id="date" className='rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-600 p-2.5' />

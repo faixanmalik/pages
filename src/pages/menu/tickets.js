@@ -163,7 +163,7 @@ const Tickets = () => {
             </button>
 
             <div className='border border-gray-300 text-sm font-semibold shadow-lg p-1 px-3 bg-gray-200 rounded-md'>
-              2 TICKETS
+              {tableData.length} TICKETS
             </div>
 
           </div>
