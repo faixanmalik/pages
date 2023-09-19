@@ -1,5 +1,7 @@
 import {React, useState} from 'react'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import { AiOutlineUser } from 'react-icons/ai';
+import { BsFillArrowRightCircleFill, BsTelephone } from 'react-icons/bs';
+import { MdOutlineNumbers } from 'react-icons/md';
 
 const BarcodeSearch = () => {
 
@@ -45,20 +47,38 @@ const BarcodeSearch = () => {
 
                 <div className='flex space-y-5 flex-col'>
                     <div className="relative w-full">
-                        <div className="absolute shadow-lg inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                             </svg>
                         </div>
                         <input value={search} onChange={handleChange} type="text" id="search" name='search' className="block w-full p-2 pl-10 border border-gray-600 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." required/>
                     </div>
-            
-                    <input placeholder='Product Name' name="productName" id='productName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
+                    <div className="relative w-full">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <MdOutlineNumbers className='text-xl mt-1 bg-gray-50'/>
+                        </div>
+                        <input placeholder='Product Name' name="productName" id='productName' type="text" className="px-3 py-2 w-9/12 mt-1 pl-10 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    </div>
+
+                    
                     <div className='flex space-x-3'>
-                        <input placeholder='Supplier Name' name="supplierName" id='supplierName' type="text" className="px-3 py-2 mt-1 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
-                        <input placeholder='Supplier No' name="supplierNo" id='supplierNo' type="number" className="px-3 py-2 mt-1 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                        <div className="relative w-full">
+                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <AiOutlineUser className='text-xl mt-1 bg-gray-50'/>
+                            </div>
+                            <input placeholder='Supplier Name' name="supplierName" id='supplierName' type="text" className="px-3 py-2 mt-1 pl-10 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                        </div>
+
+                        <div className="relative w-full">
+                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <BsTelephone className='text-lg mt-1 bg-gray-50'/>
+                            </div>
+                            <input placeholder='Supplier No' name="supplierNo" id='supplierNo' type="number" className="px-3 py-2 mt-1 pl-10  text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                        </div>
+
 
                     </div>
 
@@ -70,6 +90,7 @@ const BarcodeSearch = () => {
                     </div>
 
                     <div className='flex space-x-3'>
+                        
                         <input placeholder='Cost Money' name="cost" id='cost' type="number" className="px-3 py-2 text-sm bg-gray-50 resize-none text-gray-700 outline-none border border-gray-600 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                         <select
