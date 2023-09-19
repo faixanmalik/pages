@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { React, useState } from 'react'
-import { AiOutlineUnorderedList, AiTwotoneSetting } from 'react-icons/ai';
+import { AiOutlineUnorderedList, AiOutlineUser, AiTwotoneSetting } from 'react-icons/ai';
 import { BiPlusMedical, BiSolidHelpCircle } from 'react-icons/bi';
 import { BsAspectRatio, BsInfoCircle, BsInfoCircleFill, BsSearch } from 'react-icons/bs';
 import { FiFilter } from 'react-icons/fi';
@@ -149,8 +149,12 @@ const Customer = () => {
                   <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                       {item.id}
                   </td>
-                  <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
-                      {item.name}
+                  <td scope="row" className="px-6 group py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <Link className='flex items-center' href={'/'}>
+                        <AiOutlineUser className='mx-2 text-lg visible group-hover:hidden'/>
+                        <BsSearch className='mx-2 text-lg hidden group-hover:block'/>
+                        {item.name}
+                      </Link>
                   </td>
                   <td className="px-6 py-3">
                       {item.contacts}
