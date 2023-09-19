@@ -19,6 +19,11 @@ const LowerStatusBar = () => {
       link: '/menu/customers'
     },
     {
+      title: 'Barcode Search',
+      icon: BiBarcodeReader,
+      link: '/menu/barcode-search'
+    },
+    {
       title: 'Products',
       icon: FaShoppingCart,
       link: '/menu/products'
@@ -47,11 +52,6 @@ const LowerStatusBar = () => {
       title: 'Parts',
       icon: FaPlane,
       link: '/menu/parts'
-    },
-    {
-      title: 'Inventory',
-      icon: BiBarcodeReader,
-      link: '/menu/inventory'
     },
     {
       title: 'Calendar',
