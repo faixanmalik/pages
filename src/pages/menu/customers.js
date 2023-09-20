@@ -152,9 +152,12 @@ const Customer = () => {
                   </td>
                   <td scope="row" className="px-6 group py-3 font-medium text-gray-900 whitespace-nowrap">
                       <Link className='flex items-center' href={'/'}>
-                        <BiSolidUser className='mx-2 text-lg visible group-hover:hidden'/>
+                        {/* <BiSolidUser className='mx-2 text-lg visible group-hover:hidden'/> */}
+                        <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
+                          <BiSolidUser className='p-[3px] text-2xl visible group-hover:hidden'/>
+                        </div>
                         <div className='mx-[7px] border border-gray-900 rounded-full hidden group-hover:block'>
-                          <FaSearch className='p-[3px] text-lg hidden group-hover:block'/>
+                          <FaSearch className='p-[5px] text-2xl hidden group-hover:block'/>
                         </div>
                         {item.name}
                       </Link>
