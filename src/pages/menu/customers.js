@@ -49,7 +49,7 @@ const Customer = () => {
   ]
 
   return (
-    <div className='bg-[#f7f7f7] min-h-screen text-black px-20'>
+    <div className='bg-[#f7f7f7] min-h-screen text-black px-28'>
     <div className='py-5'>
       <div className='flex flex-col space-y-4 items-center space-x-3'>
 
