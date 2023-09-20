@@ -16,6 +16,8 @@ const Customer = () => {
   const [search, setSearch] = useState('')
   const [selectedIds, setSelectedIds] = useState([]);
 
+  const [isTooltipVisible, setTooltipVisible] = useState(false);
+
   const handleChange = (e)=>{
     if(e.target.name === 'search'){
       setSearch(e.target.value);
@@ -102,11 +104,11 @@ const Customer = () => {
       </div>
 
       <div className='mt-10'>
-        <div className='flex justify-end'>
+        {/* <div className='flex justify-end'>
           <div className='border border-gray-300 text-sm font-semibold shadow-lg p-1 px-3 bg-gray-200 rounded-md'>
             {tableData.length} Customers
           </div>
-        </div>
+        </div> */}
 
 
         <div className="overflow-x-auto shadow-sm mt-2">
@@ -131,7 +133,9 @@ const Customer = () => {
                     Phone
                   </th>
                   <th scope="col" className="px-6 py-3 text-blue-800">
-                    Created
+                    <span className='flex text-slate-600 flex-row-reverse -mt-4 -mr-6 w-28 float-right text-xs font-semibold shadow-lg p-1 px-3 bg-gray-100'>
+                      {tableData.length} Customers
+                    </span> Created
                   </th>
                 </tr>
               </thead>
@@ -145,7 +149,7 @@ const Customer = () => {
                       <input id="checkbox-table-search-1" type="checkbox" onChange={e => handleRowCheckboxChange(e, item._id)} className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                     </div>
                   </td>
-                  <td scope="row" className="px-6 group py-2 font-medium text-gray-900 whitespace-nowrap">
+                  {/* <td scope="row" className="px-6 group py-2 font-medium text-gray-900 whitespace-nowrap">
                       <Link className='flex items-center' href={'/'}>
                         <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
                           <BiSolidUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
@@ -153,16 +157,37 @@ const Customer = () => {
                         <div className='group mx-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
                           <FaSearch className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
                         </div>
+                        <div className='hidden group-hover:block'>
+                          helooooo
+                        </div>
+                        {item.name}
+                      </Link>
+                  </td> */}
+                  <td scope="row" className="px-6 group py-2 font-medium text-gray-900 whitespace-nowrap">
+                      <Link className='flex items-center' href={'/'}>
+                        <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
+                          <BiSolidUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
+                        </div>
+
+                          <div onMouseEnter={() => setTooltipVisible(true)} onMouseLeave={() => setTooltipVisible(false)} className='mx-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
+                            <FaSearch className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
+                          </div>
+                          {isTooltipVisible && (<div id="tooltip-default" role="tooltip" class="absolute -mt-20 -ml-5 z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
+                              More Info
+                              <div class="tooltip-arrow" data-popper-arrow></div>
+                          </div>)}
                         {item.name}
                       </Link>
                   </td>
+                  
+                  
                   <td className="px-6 py-2">
                       {item.contacts}
                   </td>
-                  <td className="p-2">
+                  <td className="p-2 px-6">
                       <span className='text-blue-800 hover:underline'>{item.email}</span>
                   </td>
-                  <td className="py-2">
+                  <td className="py-2 px-6">
                       <span className='text-blue-800 hover:underline'>{item.phoneNo}</span>
                   </td>
                   <td className="px-6 py-2">
