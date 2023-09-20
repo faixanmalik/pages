@@ -7,6 +7,8 @@ import { FaSearch } from 'react-icons/fa';
 import { FiFilter } from 'react-icons/fi';
 import { LuSettings2 } from 'react-icons/lu';
 
+import { Tooltip, Button } from "@material-tailwind/react";
+
 
 const Customer = () => {
 
@@ -45,7 +47,7 @@ const Customer = () => {
   ]
 
   return (
-    <div className='bg-[#f7f7f7] min-h-screen text-black px-5'>
+    <div className='bg-[#f7f7f7] min-h-screen text-black px-20'>
     <div className='py-5'>
       <div className='flex flex-col space-y-4 items-center space-x-3'>
 
@@ -82,7 +84,6 @@ const Customer = () => {
         </div>
 
       </div>
-
       <div className="flex mt-5 space-x-3">
         <div className='flex w-full'>
           <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-600 rounded-l-md">
@@ -95,12 +96,12 @@ const Customer = () => {
               <BsSearch className='text-lg'/>
               Search
           </button>
-        </div>
+        </div> 
+
 
       </div>
 
-
-      <div className='px-5 mt-10'>
+      <div className='mt-10'>
         <div className='flex justify-end'>
           <div className='border border-gray-300 text-sm font-semibold shadow-lg p-1 px-3 bg-gray-200 rounded-md'>
             {tableData.length} Customers
@@ -146,12 +147,11 @@ const Customer = () => {
                   </td>
                   <td scope="row" className="px-6 group py-2 font-medium text-gray-900 whitespace-nowrap">
                       <Link className='flex items-center' href={'/'}>
-                        {/* <BiSolidUser className='mx-2 text-lg visible group-hover:hidden'/> */}
                         <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
                           <BiSolidUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
                         </div>
-                        <div className='mx-[7px] border border-blue-600 rounded-full hidden group-hover:block'>
-                          <FaSearch className='p-[5px] text-gray-600 text-2xl hidden group-hover:block'/>
+                        <div className='group mx-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
+                          <FaSearch className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
                         </div>
                         {item.name}
                       </Link>
