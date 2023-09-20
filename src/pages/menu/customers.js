@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { React, useState } from 'react'
 import { AiOutlineUnorderedList, AiOutlineUser, AiTwotoneSetting } from 'react-icons/ai';
-import { BiPlusMedical, BiSolidHelpCircle } from 'react-icons/bi';
+import { BiPlusMedical, BiSolidHelpCircle, BiSolidUser } from 'react-icons/bi';
 import { BsAspectRatio, BsInfoCircle, BsInfoCircleFill, BsSearch } from 'react-icons/bs';
+import { FaSearch } from 'react-icons/fa';
 import { FiFilter } from 'react-icons/fi';
 import { LuSettings2 } from 'react-icons/lu';
 
@@ -151,8 +152,10 @@ const Customer = () => {
                   </td>
                   <td scope="row" className="px-6 group py-3 font-medium text-gray-900 whitespace-nowrap">
                       <Link className='flex items-center' href={'/'}>
-                        <AiOutlineUser className='mx-2 text-lg visible group-hover:hidden'/>
-                        <BsSearch className='mx-2 text-lg hidden group-hover:block'/>
+                        <BiSolidUser className='mx-2 text-lg visible group-hover:hidden'/>
+                        <div className='mx-[7px] border border-gray-900 rounded-full hidden group-hover:block'>
+                          <FaSearch className='p-[3px] text-lg hidden group-hover:block'/>
+                        </div>
                         {item.name}
                       </Link>
                   </td>
@@ -160,10 +163,10 @@ const Customer = () => {
                       {item.contacts}
                   </td>
                   <td className="p-3">
-                      <span className='text-blue-800'>{item.email}</span>
+                      <span className='text-blue-800 hover:underline'>{item.email}</span>
                   </td>
                   <td className="py-3">
-                      <span className='text-blue-800'>{item.phoneNo}</span>
+                      <span className='text-blue-800 hover:underline'>{item.phoneNo}</span>
                   </td>
                   <td className="px-6 py-3">
                       {item.created}
