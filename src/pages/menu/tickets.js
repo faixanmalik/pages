@@ -99,63 +99,63 @@ const Tickets = () => {
             </div>
           </div>
 
-          <div className='flex items-center w-full'>
+          
+          <div className='flex items-center w-full justify-between'>
 
-            <div className='flex w-full items-center space-x-4'>
+            <div className='flex space-x-5'>
 
-              <LuSettings2 className='text-7xl '/>
-              <div className='flex w-full items-center'>
-                <label className="font-semibold w-24 text-sm text-gray-600 pb-1">Status is Not</label>
+              <div className='flex items-center space-x-2'>
+                <label className="font-semibold text-sm text-gray-600 pb-1">Status is Not</label>
                 <select
                     id="statusIsNot"
                     name="statusIsNot"
-                    className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                    className="px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                   >
                     {status.map((item,index)=>{
                       return <option key={index} value={item}>{item}</option>
                     })}
                 </select>
               </div>
-
-
-              <div className='flex w-full items-center space-x-2'>
-                <label className="font-semibold w-14 text-sm text-gray-600 pb-1">Status Is</label>
+              <div className='flex items-center space-x-2'>
+                <label className="font-semibold text-sm text-gray-600 pb-1">Status is</label>
                 <select
                     id="statusIs"
                     name="statusIs"
-                    className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                    className="px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                   >
                     {status.map((item,index)=>{
                       return <option key={index} value={item}>{item}</option>
                     })}
                 </select>
               </div>
-
-              <div className='flex w-full items-center space-x-2'>
-                <label className="font-semibold text-sm text-gray-600 pb-1">Issue Is</label>
+              <div className='flex items-center space-x-2'>
+                <label className="font-semibold text-sm text-gray-600 pb-1">Issue is</label>
                 <select
                     id="issueIs"
                     name="issueIs"
-                    className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
+                    className="px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"
                   >
                     {status.map((item,index)=>{
                       return <option key={index} value={item}>{item}</option>
                     })}
                 </select>
               </div>
-            </div>
 
-            <div className='flex w-full justify-end items-center space-x-5'>
-              <div className='border border-gray-300 shadow-lg px-3 py-[5px] bg-slate-50 rounded-md'>
-                Apply
-              </div>
+            </div>
+            
+
+            <div className='border mr-7 border-gray-300 shadow-lg px-3 py-[5px] bg-slate-50 rounded-md'>
+              Apply
             </div>
           </div>
+
+
+
         
         </div>
 
 
-        <div className='px-5'>
+        <div className='px-5 mt-5'>
           <div className='flex justify-between'>
             <button type="submit" className='flex text-sm items-center gap-2 border border-gray-300 shadow-lg px-3 py-[5px] bg-slate-100 rounded-md cursor-pointer'>
               <AiTwotoneSetting/>
@@ -233,7 +233,7 @@ const Tickets = () => {
                       </select>
                     </td>
                     <td className="py-3">
-                        <span className='bg-red-600 text-white font-semibold flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
+                        <span className='bg-red-600 w-10/12 text-white font-semibold flex items-center justify-center text-center gap-2 py-1 rounded-md'><BsInfoCircleFill className='text-md'/> {item.lastUpdated} days</span>
                     </td>
                     <td className="px-6 py-3">
                         {item.created}
