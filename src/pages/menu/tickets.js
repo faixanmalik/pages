@@ -80,12 +80,12 @@ const Tickets = () => {
 
             <div className='flex w-full justify-end items-center space-x-5'>
 
-              <Link href={'/menu/createTicket'} className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
+              <Link href={'/menu/createTicket'} className='flex rounded-md p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
                 <BiPlusMedical/>
                 New Ticket
               </Link>
 
-              <button type="submit" className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-gray-500 text-white cursor-pointer'>
+              <button type="submit" className='flex rounded-md p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-gray-500 text-white cursor-pointer'>
                 <AiOutlineUnorderedList/>
                 Bulk Actions
               </button>
@@ -179,7 +179,7 @@ const Tickets = () => {
                       </div>
                     </th>
                     <th scope="col" className="px-6 py-3 text-blue-800">
-                      Sr.
+                      Ticket No
                     </th>
                     <th scope="col" className="px-6 py-3 text-blue-800">
                       Customer
