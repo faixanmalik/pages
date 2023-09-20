@@ -118,18 +118,15 @@ const Customer = () => {
                     </div>
                   </th>
                   <th scope="col" className="px-6 py-3 text-blue-800">
-                    Sr.
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-blue-800">
                     Name/Business
                   </th>
-                  <th scope="col" className="px-6 py-3 text-blue-800">
+                  <th scope="col" className="px-6 py-3">
                     Contacts
                   </th>
                   <th scope="col" className="px-6 py-3 text-blue-800">
                     Email
                   </th>
-                  <th scope="col" className="px-6 py-3 text-blue-800">
+                  <th scope="col" className="px-6 py-3">
                     Phone
                   </th>
                   <th scope="col" className="px-6 py-3 text-blue-800">
@@ -147,17 +144,14 @@ const Customer = () => {
                       <input id="checkbox-table-search-1" type="checkbox" onChange={e => handleRowCheckboxChange(e, item._id)} className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                     </div>
                   </td>
-                  <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
-                      {item.id}
-                  </td>
                   <td scope="row" className="px-6 group py-3 font-medium text-gray-900 whitespace-nowrap">
                       <Link className='flex items-center' href={'/'}>
                         {/* <BiSolidUser className='mx-2 text-lg visible group-hover:hidden'/> */}
                         <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
-                          <BiSolidUser className='p-[3px] text-2xl visible group-hover:hidden'/>
+                          <BiSolidUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
                         </div>
-                        <div className='mx-[7px] border border-gray-900 rounded-full hidden group-hover:block'>
-                          <FaSearch className='p-[5px] text-2xl hidden group-hover:block'/>
+                        <div className='mx-[7px] border border-blue-600 rounded-full hidden group-hover:block'>
+                          <FaSearch className='p-[5px] text-gray-600 text-2xl hidden group-hover:block'/>
                         </div>
                         {item.name}
                       </Link>
