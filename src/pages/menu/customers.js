@@ -104,13 +104,6 @@ const Customer = () => {
       </div>
 
       <div className='mt-10'>
-        {/* <div className='flex justify-end'>
-          <div className='border border-gray-300 text-sm font-semibold shadow-lg p-1 px-3 bg-gray-200 rounded-md'>
-            {tableData.length} Customers
-          </div>
-        </div> */}
-
-
         <div className="overflow-x-auto shadow-sm mt-2">
             <table className="w-full text-sm text-left text-gray-500">
               <thead className="text-xs text-gray-700 uppercase bg-white">
@@ -133,7 +126,7 @@ const Customer = () => {
                     Phone
                   </th>
                   <th scope="col" className="px-6 py-3 text-blue-800">
-                    <span className='flex text-slate-600 flex-row-reverse -mt-4 -mr-6 w-28 float-right text-xs font-semibold shadow-lg p-1 px-3 bg-gray-100'>
+                    <span className='flex text-slate-600 flex-row-reverse -mt-4 -mr-4 w-28 float-right text-xs font-semibold shadow-lg p-1 px-3 bg-gray-100'>
                       {tableData.length} Customers
                     </span> Created
                   </th>
