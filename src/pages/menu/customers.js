@@ -58,12 +58,12 @@ const Customer = () => {
 
           <div className='flex w-full justify-end items-center space-x-5'>
 
-            <Link href={'/menu/createCustomer'} className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
+            <Link href={'/menu/createCustomer'} className='flex p-[8px] rounded-md shadow-lg px-3 text-sm items-center font-medium gap-1 bg-green-600 text-white cursor-pointer'>
               <BiPlusMedical/>
               New Customer
             </Link>
 
-            <button type="submit" className='flex p-[8px] shadow-lg px-3 text-sm items-center font-medium gap-1 bg-gray-500 text-white cursor-pointer'>
+            <button type="submit" className='flex p-[8px] rounded-md shadow-lg px-3 text-sm items-center font-medium gap-1 bg-gray-500 text-white cursor-pointer'>
               <AiOutlineUnorderedList/>
               Bulk Actions
             </button>
