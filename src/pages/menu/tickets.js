@@ -34,6 +34,7 @@ const Tickets = () => {
     {
       id: 4201,
       customer: 'Walkin Customer',
+      productNo: 123456789,
       subject: 'Ticket Title',
       status: 'In-Progress',
       lastUpdated:6,
@@ -102,7 +103,9 @@ const Tickets = () => {
           
           <div className='flex items-center w-full justify-between'>
 
-            <div className='flex space-x-5'>
+            <div className='flex items-center space-x-5'>
+
+              <LuSettings2 className='text-xl'/>
 
               <div className='flex items-center space-x-2'>
                 <label className="font-semibold text-sm text-gray-600 pb-1">Status is Not</label>
@@ -182,6 +185,9 @@ const Tickets = () => {
                       Ticket No
                     </th>
                     <th scope="col" className="px-6 py-3 text-blue-800">
+                      Product No
+                    </th>
+                    <th scope="col" className="px-6 py-3 text-blue-800">
                       Customer
                     </th>
                     <th scope="col" className="px-6 py-3 text-blue-800">
@@ -214,6 +220,9 @@ const Tickets = () => {
                     <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                         {item.id}
                     </td>
+                    <td scope="row" className="px-6 py-3 font-medium text-blue-700 whitespace-nowrap">
+                        {item.productNo}
+                    </td>
                     <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                         {item.customer}
                     </td>
@@ -221,7 +230,6 @@ const Tickets = () => {
                         {item.subject}
                     </td>
                     <td className="p-3">
-                        {/* <span className='border border-gray-200 px-3 py-1 bg-gray-50'>{item.status}</span> */}
                         <select
                           id="statusIs"
                           name="statusIs"
