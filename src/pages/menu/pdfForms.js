@@ -5,10 +5,12 @@ import { BsBuilding, BsFillCheckCircleFill } from 'react-icons/bs'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
 import { ImParagraphLeft } from 'react-icons/im'
 import { MdEmail, MdOutlineNumbers, MdProductionQuantityLimits } from 'react-icons/md'
+import { headerImg } from '../../../public/PdfFormHeader.jpg'
 
 
 const PdfForms = () => {
 
+  console.log(headerImg)
       
   return (
     <div className='bg-[#f7f7f7] px-10'>
