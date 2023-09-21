@@ -1,5 +1,10 @@
 import { React } from 'react'
-import { BsFillCheckCircleFill } from 'react-icons/bs'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { BiSolidUser } from 'react-icons/bi'
+import { BsBuilding, BsFillCheckCircleFill } from 'react-icons/bs'
+import { HiOutlineOfficeBuilding } from 'react-icons/hi'
+import { ImParagraphLeft } from 'react-icons/im'
+import { MdEmail, MdOutlineNumbers, MdProductionQuantityLimits } from 'react-icons/md'
 
 
 const PdfForms = () => {
@@ -48,16 +53,31 @@ const PdfForms = () => {
             <div className='flex items-center py-4 space-x-5 justify-between border-b-2 border-gray-700'>
 
                 <h1 className='text-black font-semibold text-xl'>Customer: </h1>
-                <div className='flex flex-col w-1/5'>
-                    <input placeholder='Phone number / Mobile' name="phoneNo" id='phoneNo' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <div className='flex flex-col w-1/4'>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <BiSolidUser className='text-lg'/>
+                    </span>
+                    <input placeholder='Phone number / Mobile' type="number" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
 
                 <div className='flex flex-col w-1/4'>
-                    <input placeholder='Email' name="email" id='email' type="email" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    <div className='flex'>
+                      <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                          <MdEmail className='text-lg'/>
+                      </span>
+                      <input placeholder='Email' type="email" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                    </div>
                 </div>
 
                 <div className='flex flex-col w-1/2'>
-                    <input placeholder='Customer Name / Company Name' name="customerName" id='customerName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                    <div className='flex'>
+                      <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                          <HiOutlineOfficeBuilding className='text-lg'/>
+                      </span>
+                      <input placeholder='Customer Name / Company Name' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                    </div>
                 </div>
 
             </div>
@@ -68,17 +88,32 @@ const PdfForms = () => {
             
               <div className='flex items-center w-1/3 space-x-3'>
                 <label className="text-black font-semibold text-xl">Product No:</label>
-                <input placeholder='xxxxxxxx' name="productNo " id='productNo' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <div className='flex'>
+                  <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                      <MdOutlineNumbers className='text-lg'/>
+                  </span>
+                  <input placeholder='xxxxxxxx' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                </div>
               </div>
 
               <div className='flex items-center w-1/3 space-x-3'>
-                <label className="text-black font-semibold text-xl">Product Type:</label>
-                <input placeholder='xxxxxxxx' name="productType" id='productType' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <label className="text-black w-[130px] font-semibold text-xl">Product Type:</label>
+                <div className='flex'>
+                  <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                      <MdProductionQuantityLimits className='text-lg'/>
+                  </span>
+                  <input placeholder='xxxxxxxx' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                </div>
               </div>
 
               <div className='flex items-center w-1/3 space-x-3'>
-                <label className="text-black font-semibold text-xl">Related Product:</label>
-                <input placeholder='xxxxxxxx' name="relatedProduct" id='relatedProduct' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <label className="text-black w-[180px] font-semibold text-xl">Related Product:</label>
+                <div className='flex'>
+                  <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                      <AiOutlineShoppingCart className='text-lg'/>
+                  </span>
+                  <input placeholder='xxxxxxxx' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                </div>
               </div>
               
 
@@ -88,7 +123,12 @@ const PdfForms = () => {
 
               <div className='flex items-center w-full space-x-3'>
                 <label className="text-black w-[310px] font-semibold text-xl">Title or Short Description:</label>
-                <input placeholder='Write your thoughts here...' name="productNo " id='productNo' type="number" className="px-3 py-2 w-full mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg transition-colors duration-200 ease-in-out" />
+                <div className='flex w-full'>
+                  <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                      <ImParagraphLeft className='text-lg'/>
+                  </span>
+                  <input placeholder='Write your thoughts here...' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                </div>
               </div>
 
             </div>
@@ -115,13 +155,13 @@ const PdfForms = () => {
 
 
             <div className='w-1/4 mx-auto'>
-                <h1 className='text-black text-center font-semibold text-lg'>Customer Signature</h1>
-                <div className='w-full h-20 border border-gray-600'></div>
+              <h1 className='text-black text-center font-semibold text-lg'>Customer Signature</h1>
+              <div className='w-full h-20 border border-gray-600'></div>
             </div>
 
 
             <div className='w-1/4 mx-auto flex justify-center'>
-                <button type="submit" className='flex p-[8px] px-3 items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
+                <button type="submit" className='flex p-[8px] rounded-md px-3 w-full justify-center items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
                   {/* <BsFillCheckCircleFill className='text-sm'/> */}
                   <h1 className=''>Click to sign</h1>
                 </button>
