@@ -16,7 +16,10 @@ const CreateCustomer = () => {
             name: 'Customer info',
         },
         {
-            name: 'Custom Fields',
+            name: 'Private Customer',
+        },
+        {
+            name: 'Business Customer',
         },
     ]
     let headerText = 'New Customer';
