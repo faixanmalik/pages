@@ -12,15 +12,15 @@ import { FaLocationDot } from 'react-icons/fa6'
 const CreateCustomer = () => {
 
     let fields = [
-        {
-            name: 'Customer info',
-        },
-        {
-            name: 'Private Customer',
-        },
-        {
-            name: 'Business Customer',
-        },
+      {
+          name: 'Customer info',
+      },
+      {
+          name: 'Private Customer',
+      },
+      {
+          name: 'Business Customer',
+      },
     ]
     let headerText = 'New Customer';
 
