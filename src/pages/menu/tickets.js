@@ -158,7 +158,7 @@ const Tickets = () => {
         </div>
 
 
-        <div className='px-5 mt-5'>
+        <div className='px-5 mt-8'>
           <div className='flex justify-between'>
             <button type="submit" className='flex text-sm items-center gap-2 border border-gray-300 shadow-lg px-3 py-[5px] bg-slate-100 rounded-md cursor-pointer'>
               <AiTwotoneSetting/>
