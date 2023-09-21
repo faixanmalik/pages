@@ -149,7 +149,6 @@ const BarcodeSearch = () => {
         </div>
 
         <div className='mt-4'>
-            {/* <button type="submit" className='flex py-2 font-semibold rounded-md px-6 items-center gap-2 bg-white text-[#ee8e00] hover:bg-[#ee8e00] hover:text-white border-2 border-[#ee8e00] cursor-pointer'>Close</button> */}
             <button type="submit" className=' py-1 mt-3 rounded-xl px-7 text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>Close</button>
         </div>
 

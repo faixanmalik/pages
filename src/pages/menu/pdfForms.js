@@ -1,4 +1,5 @@
 import { React } from 'react'
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 
 const PdfForms = () => {
@@ -116,6 +117,14 @@ const PdfForms = () => {
             <div className='w-1/4 mx-auto'>
                 <h1 className='text-black text-center font-semibold text-lg'>Customer Signature</h1>
                 <div className='w-full h-20 border border-gray-600'></div>
+            </div>
+
+
+            <div className='w-1/4 mx-auto flex justify-center'>
+                <button type="submit" className='flex p-[8px] px-3 items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
+                  {/* <BsFillCheckCircleFill className='text-sm'/> */}
+                  <h1 className=''>Click to sign</h1>
+                </button>
             </div>
 
         </div>
