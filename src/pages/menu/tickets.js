@@ -1,15 +1,26 @@
+import { Dialog, Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
-import { React, useState } from 'react'
-import { AiOutlineUnorderedList, AiTwotoneSetting } from 'react-icons/ai';
-import { BiPlusMedical, BiSolidHelpCircle } from 'react-icons/bi';
+import { Fragment, React, useRef, useState } from 'react'
+import { AiFillPhone, AiOutlineFilePdf, AiOutlineUnorderedList, AiTwotoneSetting } from 'react-icons/ai';
+import { BiLinkAlt, BiPlusMedical, BiSolidHelpCircle, BiSolidPurchaseTag, BiSolidUser } from 'react-icons/bi';
 import { BsAspectRatio, BsInfoCircle, BsInfoCircleFill } from 'react-icons/bs';
-import { FiFilter } from 'react-icons/fi';
+import { FaInfo, FaSearch, FaUser } from 'react-icons/fa';
+import { FiExternalLink, FiFilter } from 'react-icons/fi';
+import { GrEdit } from 'react-icons/gr';
+import { ImCross } from 'react-icons/im';
 import { LuSettings2 } from 'react-icons/lu';
+import { MdDateRange, MdEmail } from 'react-icons/md';
 
 const Tickets = () => {
 
   const [search, setSearch] = useState('')
   const [selectedIds, setSelectedIds] = useState([]);
+
+  const [isIdTooltipVisible, setIsIdTooltipVisible] = useState(false);
+  const [isNameTooltipVisible, setIsNameTooltipVisible] = useState(false);
+  const [open, setOpen] = useState(false)
+  const cancelButtonRef = useRef(null)
 
   const handleChange = (e)=>{
     if(e.target.name === 'search'){
@@ -33,14 +44,33 @@ const Tickets = () => {
   let tableData = [
     {
       id: 4201,
-      customer: 'Walkin Customer',
+      name: 'Walkin Customer',
+      email: 'xyz@example.com',
       productNo: 123456789,
+      phoneNo:123456789,
       subject: 'Ticket Title',
       status: 'In-Progress',
-      lastUpdated:6,
       created: '25-08-2023',
+      lastUpdated:6,
+      link: 'Customer Online Profile',
+      desc: 'booooooooom this is text',
+      balance: 100,
+      credit: 50,
+      totalInvoiced: 500,
       issue: 'Other'
+
     },
+  ]
+
+  let subMenu = [
+    'Appointment',
+    'Reminder',
+    'Invoices',
+    'Estimates',
+    'Tickets',
+    'Payments',
+    'Customer Purchase',
+    'Recurring Purchase'
   ]
 
   return (
@@ -166,7 +196,7 @@ const Tickets = () => {
             </button>
 
             <div className='border border-gray-300 text-sm font-semibold shadow-lg p-1 px-3 bg-gray-200 rounded-md'>
-              {tableData.length} TICKETS
+              {tableData.length} TICKET
             </div>
 
           </div>
@@ -217,17 +247,232 @@ const Tickets = () => {
                         <input id="checkbox-table-search-1" type="checkbox" onChange={e => handleRowCheckboxChange(e, item._id)} className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                       </div>
                     </td>
-                    <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    {/* <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
                         {item.id}
+                    </td> */}
+                    <td scope="row" className="group px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <Link href={''} className='flex items-center'>
+                        <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
+                          <BiSolidPurchaseTag className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
+                        </div>
+
+                          <div onMouseEnter={() => setIsIdTooltipVisible(true)} onMouseLeave={() => setIsIdTooltipVisible(false)} className='mx-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
+                            <FaSearch onClick={()=> {setOpen(true)}}  className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
+                          </div>
+                          {isIdTooltipVisible && (<div id="tooltip-default" role="tooltip" class="absolute -mt-20 -ml-5 z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
+                              More Info
+                              <div class="tooltip-arrow" data-popper-arrow></div>
+                          </div>)}
+                        {item.id}
+                      </Link>
                     </td>
+                    <Transition.Root show={open} as={Fragment}>
+                      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+                        <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0"
+                            enterTo="opacity-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0"
+                        >
+                            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                        </Transition.Child>
+
+                        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                enterTo="opacity-100 translate-y-0 sm:scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            >
+                                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-3xl min-h-[400px]">
+
+
+                                <div className="bg-white pb-4 pt-5 sm:p-6 sm:pb-4">
+                                    
+                                    <div className='mt-5 flex flex-col space-y-4 text-black'>
+
+                                        <div className='flex items-center justify-between'>
+                                          <div>
+                                            <h1 className='font-semibold text-2xl'>{item.name}</h1>
+                                          </div>
+                                          <div className='flex space-x-5'>
+                                            <FiExternalLink className='cursor-pointer text-lg text-gray-400'/>
+                                            <ImCross onClick={()=>setOpen(false)} className='cursor-pointer text-lg text-gray-400'/>
+                                          </div>
+                                        </div>
+
+                                        <div>
+                                          <Menu as="div" className=" relative inline-block text-left">
+                                            <div className='items-center flex'>
+
+                                              <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                                                <BiPlusMedical className='my-auto'/>
+                                                  New
+                                                  <ChevronDownIcon className="-mr-1 my-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                                              </Menu.Button>
+                                              <Menu.Button className="inline-flex  w-full justify-center gap-x-1.5 rounded-md bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                                                <GrEdit className='my-auto'/>
+                                                  Edit
+                                              </Menu.Button>
+
+                                              <Menu.Button className="inline-flex ml-4 w-full justify-center gap-x-1.5 rounded-md bg-gray-50 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                                                <AiOutlineFilePdf className='my-auto'/>
+                                                <ChevronDownIcon className="-mr-1 my-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                                              </Menu.Button>
+                                            </div>
+
+                                            <Transition
+                                              as={Fragment}
+                                              enter="transition ease-out duration-100"
+                                              enterFrom="transform opacity-0 scale-95"
+                                              enterTo="transform opacity-100 scale-100"
+                                              leave="transition ease-in duration-75"
+                                              leaveFrom="transform opacity-100 scale-100"
+                                              leaveTo="transform opacity-0 scale-95"
+                                            >
+                                              <Menu.Items className="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                                <div className="py-1">
+                                                  {subMenu.map((item, index)=>{
+                                                    return <Menu.Item key={index}>
+                                                    {({ active }) => (
+                                                      <a
+                                                        href="#"
+                                                        className={classNames(
+                                                          active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                          'block px-4 py-1 text-sm'
+                                                        )}
+                                                      >
+                                                        {item}
+                                                      </a>
+                                                    )}
+                                                  </Menu.Item>
+                                                  })}
+                                                  
+                                                </div>
+                                              </Menu.Items>
+                                            </Transition>
+                                          </Menu>
+                                        </div>
+
+                                        <div className='flex justify-between w-8/12'>
+                                          <div>
+                                            <h1 className='font-normal text-md uppercase'>Balance</h1>
+                                            <h1 className='font-semibold text-2xl'>${item.balance}.00</h1>
+                                          </div>
+                                          <div>
+                                            <h1 className='font-normal text-md uppercase'>Credit</h1>
+                                            <h1 className='font-semibold text-2xl'>${item.credit}.00</h1>
+                                          </div>
+                                          <div>
+                                            <h1 className='font-normal text-md uppercase'>Total Invoiced</h1>
+                                            <h1 className='font-semibold text-2xl'>${item.totalInvoiced}.00</h1>
+                                          </div>
+                                        </div>
+
+
+                                        <div className='pt-7  text-sm'>
+                                          <div className='flex space-x-2 items-center'>
+                                            <BiSolidUser className='text-lg'/>
+                                            <h1 className='uppercase font-semibold tracking-wide'>Customer Details</h1>
+                                          </div>
+
+                                          <div className='flex mt-3 w-full items-center'>
+
+                                            <div className='flex space-x-2 w-1/2 items-center'>
+                                              <MdEmail className='text-lg'/>
+                                              <h1 className='font-medium'>Email</h1>
+                                            </div>
+                                            <div className='text-left'>{item.email}</div>
+
+                                          </div>
+
+
+                                          <div className='flex mt-3 w-full items-center'>
+
+                                            <div className='flex space-x-2 w-1/2 items-center'>
+                                              <AiFillPhone className='text-lg'/>
+                                              <h1 className='font-medium'>Phone</h1>
+                                            </div>
+                                            <div className='text-blue-400 text-left'>{item.phoneNo}</div>
+
+                                          </div>
+
+                                          <div className='flex mt-3 w-full items-center'>
+
+                                            <div className='flex space-x-2 w-1/2 items-center'>
+                                              <BiLinkAlt className='text-lg'/>
+                                              <h1 className='font-medium'>Links</h1>
+                                            </div>
+                                            <div className='text-blue-400 text-left'>{item.link}</div>
+
+                                          </div>
+
+                                          <div className='flex mt-3 w-full items-center'>
+
+                                            <div className='flex space-x-2 w-1/2 items-center'>
+                                              <MdDateRange className='text-lg'/>
+                                              <h1 className='font-medium'>Created</h1>
+                                            </div>
+                                            <div className='text-left'>{item.created}</div>
+
+                                          </div>
+
+
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                
+                                </Dialog.Panel>
+                            </Transition.Child>
+                            </div>
+                        </div>
+                      </Dialog>
+                    </Transition.Root>
                     <td scope="row" className="px-6 py-3 font-medium text-blue-700 whitespace-nowrap">
                         {item.productNo}
                     </td>
-                    <td scope="row" className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
-                        {item.customer}
+                    <td scope="row" className="group px-6 py-3 font-medium text-gray-900 whitespace-nowrap">
+                        
+                        <Link href={''} className='flex items-center'>
+                        
+                          <div className='mr-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
+                            <FaUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
+                          </div>
+
+                          <div onMouseEnter={() => setIsNameTooltipVisible(true)} onMouseLeave={() => setIsNameTooltipVisible(false)} className='mr-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
+                            <FaSearch onClick={()=> {setOpen(true)}}  className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
+                          </div>
+                          {isNameTooltipVisible && (<div id="tooltip-default" role="tooltip" class="absolute -mt-20 -ml-5 z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
+                              More Info
+                              <div class="tooltip-arrow" data-popper-arrow></div>
+                          </div>)}
+                          {item.name}
+                      </Link>
                     </td>
-                    <td className="px-6 py-3">
-                        {item.subject}
+                    <td className="px-6 py-3 flex items-center">
+                      {item.subject}
+                      <span className='group ml-1 cursor-pointer'>
+                        <FaInfo className='text-md' id="info-icon" />
+                        <div
+                          id="tooltip-default"
+                          data-tooltip
+                          role="tooltip"
+                          class="hidden group-hover:inline-block absolute w-40 -mt-20 -ml-20 z-10 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700"
+                        >
+                          {item.desc}
+                          <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                      </span>
                     </td>
                     <td className="p-3">
                         <select

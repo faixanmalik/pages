@@ -159,11 +159,11 @@ const Customer = () => {
                   </td>
                   <td scope="row" className="px-6 group py-2 font-medium text-gray-900 whitespace-nowrap">
                       <Link href={''} className='flex items-center'>
-                        <div className='mx-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
+                        <div className='mr-[7px] border border-gray-50 rounded-full visible group-hover:hidden'>
                           <BiSolidUser className='p-[3px] text-gray-600 text-2xl visible group-hover:hidden'/>
                         </div>
 
-                          <div onMouseEnter={() => setTooltipVisible(true)} onMouseLeave={() => setTooltipVisible(false)} className='mx-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
+                          <div onMouseEnter={() => setTooltipVisible(true)} onMouseLeave={() => setTooltipVisible(false)} className='mr-[7px] border border-blue-600 rounded-full hidden group-hover:block hover:bg-green-600 '>
                             <FaSearch onClick={()=> {setOpen(true)}}  className='p-[5px]  text-gray-600 text-2xl hidden group-hover:block hover:text-white'/>
                           </div>
                           {isTooltipVisible && (<div id="tooltip-default" role="tooltip" class="absolute -mt-20 -ml-5 z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700">
