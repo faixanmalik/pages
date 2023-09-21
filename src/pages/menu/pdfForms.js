@@ -19,7 +19,7 @@ const PdfForms = () => {
         {/* <h1 className='text-gray-600 font-semibold'>Basic Info</h1> */}
         <div className='w-full space-y-3 items-center mt-10'>
 
-          <img className='w-full' src={'/PdfFormHeader.jpg'} alt="Header" srcSet="" />
+          <img className='w-full' src='/PdfFormHeader.jpg' alt="Header" srcSet="" />
 
           <div className='w-full space-y-3 items-center'>
 
