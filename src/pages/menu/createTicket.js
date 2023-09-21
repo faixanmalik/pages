@@ -302,9 +302,13 @@ const CreateTicket = () => {
               </div>
               <div className='flex items-center ml-auto'>
             
-                  <button type="submit" onClick={()=>setOpen(true)} className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
+                  {/* <button type="submit" onClick={()=>setOpen(true)} className='flex p-[8px] rounded-md px-3 items-center gap-2 bg-[#ee8e00] text-white cursor-pointer'>
                     <BsFillCheckCircleFill className='text-sm'/>
                       Create Ticket
+                  </button> */}
+                  <button type="submit" onClick={()=>setOpen(true)} className='flex items-center p-[8px] px-3 rounded-xl text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>
+                    <BsFillCheckCircleFill className='text-md mr-2 text-[#ee8e00]'/>
+                    Create Ticket
                   </button>
 
                   <Transition.Root show={open} as={Fragment}>
