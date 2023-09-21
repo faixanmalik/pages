@@ -5,7 +5,6 @@ import { BsBuilding, BsFillCheckCircleFill } from 'react-icons/bs'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
 import { ImParagraphLeft } from 'react-icons/im'
 import { MdEmail, MdOutlineNumbers, MdProductionQuantityLimits } from 'react-icons/md'
-import { headerImg } from '../../../public/PdfFormHeader.jpg'
 
 
 const PdfForms = () => {
@@ -20,7 +19,7 @@ const PdfForms = () => {
         {/* <h1 className='text-gray-600 font-semibold'>Basic Info</h1> */}
         <div className='w-full space-y-3 items-center mt-10'>
 
-          <img className='w-full' src={'/PdfFormHeader.jpg'} alt="Header" srcset="" />
+          <img className='w-full' src={'/PdfFormHeader.jpg'} alt="Header" srcSet="" />
 
           <div className='w-full space-y-3 items-center'>
 
