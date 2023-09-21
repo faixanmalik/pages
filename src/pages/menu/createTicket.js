@@ -3,6 +3,10 @@ import {BsCameraFill, BsFillCheckCircleFill} from 'react-icons/bs'
 import { React, Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import { MdEmail, MdOutlineNumbers } from 'react-icons/md'
+import { AiFillPhone } from 'react-icons/ai'
+import { BiBuilding, BiSolidUser } from 'react-icons/bi'
+import { LuCalendarDays } from 'react-icons/lu'
 
 const CreateTicket = () => {
 
@@ -70,8 +74,8 @@ const CreateTicket = () => {
                 <div className='flex flex-col'>
                   <div className='flex flex-col'>
                     <div className='flex space-x-3'>
-                      <input type="date" name="date" id="date" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
-                      <input type="time" name="time" id="time" className='px-3 py-2 mt-1 mb-4 text-sm w-1/2 bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
+                      <input type="date" name="date" id="date" className='px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
+                      <input type="time" name="time" id="time" className='px-3 py-2 mt-1 w-2/5 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
                     </div>
                   </div>
 
@@ -81,16 +85,27 @@ const CreateTicket = () => {
 
               <div className='flex space-x-5 justify-between'>
 
-                <div className='flex flex-col w-[130px]'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">Product Number</label>
-                  <input placeholder='1234567890' name="productNumber" id='productNumber' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <div className="flex flex-col w-[180px]">
+                  <label className="font-semibold text-sm text-left text-gray-600 pb-2">Product Number</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <MdOutlineNumbers className='text-lg'/>
+                    </span>
+                    <input placeholder='Product number' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
 
-                <div className='flex flex-col w-[130px]'>
-                  <label className="font-semibold w-52 text-sm text-gray-600 pb-1">Customer Phone No</label>
-                  <button onClick={()=> setOpenCustomerPhone(true)} type="submit" className='py-2 text-left pl-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-400 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out'>
-                    123456789
-                  </button>
+                <div className='flex flex-col w-[170px]'>
+                  <label className="font-semibold w-52 text-sm text-gray-600 pb-2">Customer Phone No</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <AiFillPhone className='text-lg'/>
+                    </span>
+                    <button onClick={()=> setOpenCustomerPhone(true)} type="submit" className='px-3 py-[6px] w-full text-left text-sm bg-white bg-opacity-50 resize-none text-gray-400 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-lg  transition-colors duration-200 ease-in-out'>
+                      123456789
+                    </button>
+                  </div>
+                  
                   
                   <Transition.Root show={openCustomerPhone} as={Fragment}>
                     <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpenCustomerPhone}>
@@ -121,9 +136,6 @@ const CreateTicket = () => {
 
 
                               <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                {/* <div className="flex justify-center">
-                                    <input placeholder='1234567890' id='default-search' type="search" className="w-full px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg transition-colors duration-200 ease-in-out" />
-                                </div> */}
 
                                 <div className="relative">
                                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -152,24 +164,44 @@ const CreateTicket = () => {
 
                 </div>
 
-                <div className='flex flex-col w-1/6'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">First Name</label>
-                  <input placeholder='John' name="firstName" id='firstName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                <div className='flex flex-col w-[140px]'>
+                  <label className="font-semibold text-sm text-left text-gray-600 pb-2">First Name</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <BiSolidUser className='text-lg'/>
+                    </span>
+                    <input placeholder='John' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
+                </div>
+
+                <div className='flex flex-col w-[140px]'>
+                  <label className="font-semibold text-sm text-left text-gray-600 pb-2">Last Name</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <BiSolidUser className='text-lg'/>
+                    </span>
+                    <input placeholder='Doe' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
+                </div>
+
+                <div className='flex flex-col w-[150px]'>
+                  <label className="font-semibold text-sm text-left text-gray-600 pb-2">Comapny Name</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <BiBuilding className='text-lg'/>
+                    </span>
+                    <input placeholder='John pvt.ltd' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
 
                 <div className='flex flex-col w-1/6'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">Last Name</label>
-                  <input placeholder='Doe' name="lastName" id='lastName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-
-                <div className='flex flex-col w-1/6'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">Comapny Name</label>
-                  <input placeholder='John pvt.ltd' name="companyName" id='companyName' type="text" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-                </div>
-
-                <div className='flex flex-col w-1/6'>
-                  <label className="font-semibold text-sm text-left text-gray-600 pb-1">Email</label>
-                  <input placeholder='abc@example.com' name="email" id='email' type="email" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <label className="font-semibold text-sm text-left text-gray-600 pb-2">Email</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <MdEmail className='text-lg'/>
+                    </span>
+                    <input placeholder='abc@example.com' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
 
               </div>
@@ -177,24 +209,34 @@ const CreateTicket = () => {
               
 
 
-              <div className='flex w-10/12 space-x-5 items-center'>
+              <div className='flex w-10/12 py-3 space-x-5 items-center'>
 
               
                 <div className='flex flex-col w-1/3'>
-                  <label className="font-semibold w-20 text-sm text-gray-600 pb-1">Techantion</label>
-                  <input placeholder='John Doe' name="techantion " id='techantion' type="number" className="px-3 py-2 mt-1 mb-4 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <label className="font-semibold w-20 text-sm text-gray-600 pb-2">Techantion</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <BiSolidUser className='text-lg'/>
+                    </span>
+                    <input placeholder='John Doe' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
 
                 <div className='flex flex-col w-1/3'>
-                  <label className="font-semibold text-sm text-gray-600 pb-1">Warrenty</label>
-                  <input readOnly placeholder='warrenty' name="warrenty " id='warrenty' type="number" className="cursor-not-allowed px-3 py-2 mt-1 mb-4 text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <label className="font-semibold text-sm text-gray-600 pb-2">Warrenty</label>
+                  <div className='flex'>
+                    <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                        <LuCalendarDays className='text-lg'/>
+                    </span>
+                    <input readOnly placeholder='warrenty' type="text" id="website-admin" className="cursor-not-allowed px-3 py-[6px] w-full text-sm bg-slate-100 bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
+                  </div>
                 </div>
                 
 
               </div>
             </div>
 
-            <div className='flex items-center space-x-5 justify-between'>
+            <div className='flex py-3 items-center space-x-5 justify-between'>
 
               <div className='flex flex-col w-1/4'>
                 <label className="font-semibold w-52 text-sm text-gray-600 pb-1">Product Type</label>
