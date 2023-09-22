@@ -72,16 +72,16 @@ const Footer = () => {
 
             <h1 className='text-sm pt-6 font-semibold text-[#525252] text-center'>More from our network</h1>
             <div className='flex space-x-3 text-[#525252] justify-center'>
-              <FaFacebookF className=''/>
-              <AiOutlineTwitter className=''/>
-              <BsInstagram className=''/>
-              <AiFillYoutube className=''/>
-              <IoIosWifi className=''/>
-              <FaFacebookF className=''/>
-              <AiOutlineTwitter className=''/>
-              <BsInstagram className=''/>
-              <AiFillYoutube className=''/>
-              <IoIosWifi className=''/>
+              <FaFacebookF className='text-lg'/>
+              <AiOutlineTwitter className='text-lg'/>
+              <BsInstagram className='text-lg'/>
+              <AiFillYoutube className='text-lg'/>
+              <IoIosWifi className='text-lg'/>
+              <FaFacebookF className='text-lg'/>
+              <AiOutlineTwitter className='text-lg'/>
+              <BsInstagram className='text-lg'/>
+              <AiFillYoutube className='text-lg'/>
+              <IoIosWifi className='text-lg'/>
             </div>
             <h1 className='text-sm pt-6 font-semibold text-[#525252] text-center'>
               © 2023 
