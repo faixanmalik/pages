@@ -43,7 +43,7 @@ const Footer = () => {
   ]
   return (
     <>
-    <div className='py-16 px-10 bg-[#222222]'>
+    <div className='p-10 bg-[#222222]'>
         <div className='flex flex-col space-y-5'>
             <div className='flex space-x-3 justify-center'>
               <div className='bg-[#1877f2] rounded-full p-2'>
