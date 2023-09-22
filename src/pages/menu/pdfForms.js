@@ -55,7 +55,7 @@ const PdfForms = () => {
                 <div className='flex flex-col w-1/4'>
                   <div className='flex'>
                     <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
-                        <BsFillTelephoneFill className='text-lg'/>
+                        <BsFillTelephoneFill className='text-md'/>
                     </span>
                     <input placeholder='Phone number / Mobile' type="number" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
                   </div>
