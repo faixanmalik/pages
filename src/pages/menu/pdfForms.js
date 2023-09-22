@@ -1,7 +1,7 @@
 import { React } from 'react'
 import { AiFillPhone, AiOutlineShoppingCart } from 'react-icons/ai'
-import { BiSolidUser } from 'react-icons/bi'
-import { BsBuilding, BsFillCheckCircleFill, BsFillTelephoneFill } from 'react-icons/bs'
+import { BiSolidUser, BiTimeFive } from 'react-icons/bi'
+import { BsBuilding, BsCalendarDate, BsFillCheckCircleFill, BsFillTelephoneFill } from 'react-icons/bs'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
 import { ImParagraphLeft } from 'react-icons/im'
 import { MdEmail, MdOutlineNumbers, MdProductionQuantityLimits } from 'react-icons/md'
@@ -38,13 +38,23 @@ const PdfForms = () => {
                 </div>
 
 
-                <div className='flex flex-col space-y-2 w-[250px]'>
+                <div className='flex flex-col space-y-2 '>
 
                     <input placeholder='technician: xxxxxxx' name="productNumber" id='productNumber' type="number" className="px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                     <div className='flex space-x-2'>
-                        <input type="date" name="date" id="date" className='px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
-                        <input type="time" name="time" id="time" className='px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out' />
+                        <div className="flex w-full">
+                          <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                              <BsCalendarDate className='text-lg'/>
+                          </span>
+                          <input type="date" name="date" id="date" className='px-1 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out' />
+                        </div>
+                        <div className="flex w-1/2">
+                          <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
+                            <BiTimeFive className='text-lg'/>
+                          </span>
+                          <input type="time" name="time" id="time" className='px-1 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out' />
+                        </div>
                     </div>
                 </div>
 
