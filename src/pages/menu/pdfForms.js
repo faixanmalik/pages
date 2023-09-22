@@ -31,8 +31,8 @@ const PdfForms = () => {
                   </h1>
                 </div>
 
-                <div className='flex flex-col w-44 h-20 justify-center border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 '>
-                  <h1 className=' text-xl text-center px-3 py-2 bg-white font-bold bg-opacity-50 resize-none text-gray-700 outline-none rounded-lg transition-colors duration-200 ease-in-out'>Ticket number:</h1>
+                <div className='flex flex-col w-44 h-20 justify-center border border-gray-300 focus:border-blue-500 focus:shadow-lg rounded-lg shadow-blue-500 '>
+                  <h1 className=' text-xl text-center px-3 py-2 bg-white font-bold bg-opacity-50 resize-none text-gray-700 outline-none  transition-colors duration-200 ease-in-out'>Ticket number:</h1>
                   <span className='text-xl font-semibold text-gray-700 text-center'>xxxxxxxx</span>
 
                 </div>
