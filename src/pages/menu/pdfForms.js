@@ -160,9 +160,10 @@ const PdfForms = () => {
 
 
             <div className='w-1/4 mx-auto flex justify-center'>
-                <button type="submit" className='flex p-[8px] rounded-md px-3 w-full justify-center items-center gap-1 border border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white text-[#ee8e00] font-semibold cursor-pointer'>
-                  {/* <BsFillCheckCircleFill className='text-sm'/> */}
-                  <h1 className=''>Click to sign</h1>
+                
+                <button type="submit" onClick={()=>setOpen(true)} className='flex items-center w-full justify-center p-[8px] px-3 rounded-xl text-black border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white cursor-pointer'>
+                  {/* <BsFillCheckCircleFill className='text-md mr-2 text-[#ee8e00]'/> */}
+                  Click to sign
                 </button>
             </div>
 
