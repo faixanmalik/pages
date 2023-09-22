@@ -1,5 +1,5 @@
 import { React } from 'react'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { AiFillPhone, AiOutlineShoppingCart } from 'react-icons/ai'
 import { BiSolidUser } from 'react-icons/bi'
 import { BsBuilding, BsFillCheckCircleFill } from 'react-icons/bs'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
@@ -55,7 +55,7 @@ const PdfForms = () => {
                 <div className='flex flex-col w-1/4'>
                   <div className='flex'>
                     <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
-                        <BiSolidUser className='text-lg'/>
+                        <AiFillPhone className='text-lg'/>
                     </span>
                     <input placeholder='Phone number / Mobile' type="number" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
                   </div>
@@ -73,7 +73,7 @@ const PdfForms = () => {
                 <div className='flex flex-col w-1/2'>
                     <div className='flex'>
                       <span className="inline-flex items-center px-2 py-[6px] text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-400 rounded-l-md">
-                          <HiOutlineOfficeBuilding className='text-lg'/>
+                          <BiSolidUser className='text-lg'/>
                       </span>
                       <input placeholder='Customer Name / Company Name' type="text" id="website-admin" className="px-3 py-[6px] w-full text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-400 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-r-md transition-colors duration-200 ease-in-out"/>
                     </div>
@@ -160,7 +160,7 @@ const PdfForms = () => {
 
 
             <div className='w-1/4 mx-auto flex justify-center'>
-                <button type="submit" className='flex p-[8px] rounded-md px-3 w-full justify-center items-center gap-1 bg-[#ee8e00] text-white cursor-pointer'>
+                <button type="submit" className='flex p-[8px] rounded-md px-3 w-full justify-center items-center gap-1 border border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white text-[#ee8e00] font-semibold cursor-pointer'>
                   {/* <BsFillCheckCircleFill className='text-sm'/> */}
                   <h1 className=''>Click to sign</h1>
                 </button>
