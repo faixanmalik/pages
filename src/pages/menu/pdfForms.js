@@ -31,8 +31,10 @@ const PdfForms = () => {
                   </h1>
                 </div>
 
-                <div className='flex flex-col justify-center'>
-                  <textarea placeholder='Ticket number: xxxxxx' id="ticketNo" rows="3" cols={25} className="placeholder:font-bold placeholder:text-xl placeholder:items-center placeholder:text-gray-700 px-3 py-2 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out"></textarea>
+                <div className='flex flex-col w-44 h-20 justify-center border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 '>
+                  <h1 className=' text-xl px-3 py-2 bg-white font-bold bg-opacity-50 resize-none text-gray-700 outline-none rounded-lg transition-colors duration-200 ease-in-out'>Ticket number:</h1>
+                  <span className='text-xl font-semibold text-gray-700 text-center'>xxxxxxxx</span>
+
                 </div>
 
 
