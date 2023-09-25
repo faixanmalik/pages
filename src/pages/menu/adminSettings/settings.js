@@ -1,13 +1,16 @@
 import React from 'react'
 import { ProSidebarProvider } from "react-pro-sidebar";
 import FullLayout from "@/panel/layouts/FullLayout";
+import SystemSettings from './systemSettings';
 
-const Admin = () => {
+const Settings = () => {
   return (
     <>
     <ProSidebarProvider>
     <FullLayout>
-      
+
+      <SystemSettings/>
+
     </FullLayout>
     </ProSidebarProvider>
 
@@ -15,4 +18,4 @@ const Admin = () => {
   )
 }
 
-export default Admin
+export default Settings

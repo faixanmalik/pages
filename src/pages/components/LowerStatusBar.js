@@ -83,7 +83,7 @@ const LowerStatusBar = () => {
     {
       title: 'Admin',
       icon: AiFillSetting,
-      link: '/menu/admin'
+      link: '/menu/adminSettings/settings'
     },
   ]
 
