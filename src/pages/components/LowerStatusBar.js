@@ -1,5 +1,5 @@
 import { React, Fragment } from 'react'
-import { BiBarcodeReader, BiSolidUser } from 'react-icons/bi';
+import { BiBarcodeReader, BiBuildingHouse, BiSolidUser } from 'react-icons/bi';
 import { BsFillTagFill } from 'react-icons/bs';
 import { FaFileInvoice, FaMoneyBillAlt, FaPlane, FaRegCalendarAlt, FaShoppingCart } from 'react-icons/fa';
 import { HiOutlineSpeakerphone } from 'react-icons/hi';
@@ -56,6 +56,11 @@ const LowerStatusBar = () => {
       link: '/menu/pdfForms'
     },
     {
+      title: 'Companies',
+      icon: BiBuildingHouse,
+      link: '/menu/companies'
+    },
+    {
       title: 'Invoices',
       icon: RiBillLine,
       link: '/menu/invoices'
@@ -90,7 +95,7 @@ const LowerStatusBar = () => {
   return (
     <div className='bg-[#333333] px-16 2xl:px-40 flex items-center'>
 
-      <div className='flex items-center ml-1 px-10'>
+      <div className='flex items-center ml-1 px-5'>
         {headerItems.map((item, index)=>{
           if(item.type === 'dropdown'){
 
