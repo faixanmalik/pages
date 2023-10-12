@@ -93,7 +93,7 @@ const LowerStatusBar = () => {
   ]
 
   return (
-    <div className='bg-[#333333] px-16 2xl:px-40 flex items-center'>
+    <div className='bg-[#333333] px-10 2xl:px-40 flex items-center'>
 
       <div className='flex items-center ml-1 px-5'>
         {headerItems.map((item, index)=>{
