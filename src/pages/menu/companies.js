@@ -682,7 +682,7 @@ const Companies = () => {
 
 
               <Tabs value="companyDetails" className='h-[27rem]'>
-                <TabsHeader className='bg-[#f0f3f4] text-black'>
+                <TabsHeader className=''>
                   {newContractData.map(({ label, value, icon }) => (
                     <Tab key={value} value={value}>
                       <div className="flex items-center gap-2">
