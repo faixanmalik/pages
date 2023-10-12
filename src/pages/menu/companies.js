@@ -682,7 +682,7 @@ const Companies = () => {
 
 
               <Tabs value="companyDetails" className='h-[27rem]'>
-                <TabsHeader className=''>
+                <TabsHeader className='bg-[#f0f3f4]'>
                   {newContractData.map(({ label, value, icon }) => (
                     <Tab key={value} value={value}>
                       <div className="flex items-center gap-2">
@@ -704,7 +704,7 @@ const Companies = () => {
               <div className="bg-gray-50 space-x-3 px-4 py-3 text-right sm:px-6">
                 <button type="submit" onClick={(e)=>{submit(e)}} className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
               </div>
-
+              
             </div>
           </div>
         </form>
