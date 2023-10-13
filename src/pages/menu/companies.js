@@ -700,7 +700,7 @@ const Companies = () => {
               isFirstStep={(value) => setIsFirstStep(value)}
             >
               <Step onClick={() => setActiveStep(0)}>
-                <BuildingLibraryIcon className={`p-[9px] ${activeStep === 0 || activeStep === 1 || activeStep === 2 ? 'border-2 border-[#ee8e00] bg-white text-black' : ''}  rounded-full`} />
+                <BuildingLibraryIcon className={`p-[9px] ${activeStep === 0 || activeStep === 1 || activeStep === 2 ? 'border-2 border-[#ee8e00] bg-[#ee8e00] text-white' : ''}  rounded-full`} />
                 <div className="absolute -bottom-[4.5rem] w-max text-center ">
                   <Typography
                     variant="h6"
@@ -717,7 +717,7 @@ const Companies = () => {
                 </div>
               </Step>
               <Step onClick={() => setActiveStep(1)}>
-                <UserIcon className={`p-[9px] ${activeStep === 1 || activeStep === 2 ? 'border-2 border-[#ee8e00] bg-white text-black' : ''}  rounded-full`} />
+                <UserIcon className={`p-[9px] ${activeStep === 1 || activeStep === 2 ? 'border-2 border-[#ee8e00] bg-[#ee8e00] text-white' : ''}  rounded-full`} />
                 <div className="absolute -bottom-[4.5rem] w-max text-center">
                   <Typography
                     variant="h6"
@@ -734,7 +734,7 @@ const Companies = () => {
                 </div>
               </Step>
               <Step onClick={() => setActiveStep(2)}>
-                <CogIcon className={`p-[9px] ${activeStep === 2 ? 'border-2 border-[#ee8e00] bg-white text-black' : ''}  rounded-full`} />
+                <CogIcon className={`p-[9px] ${activeStep === 2 ? 'border-2 border-[#ee8e00] bg-[#ee8e00] text-white' : ''}  rounded-full`} />
                 <div className="absolute -bottom-[4.5rem] w-max text-center">
                   <Typography
                     variant="h6"
