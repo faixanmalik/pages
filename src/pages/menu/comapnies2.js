@@ -11,15 +11,6 @@ import {
 } from "@material-tailwind/react";
 
 
-// Stepper
-import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
-import {
-  CogIcon,
-  UserIcon,
-  BuildingLibraryIcon,
-} from "@heroicons/react/24/outline";
-
-
 const Companies = () => {
 
   const [newContractStartDate, setNewContractStartDate] = useState('')
@@ -44,13 +35,6 @@ const Companies = () => {
   const [loginId, setLoginId] = useState('')
   const [password, setPassword] = useState('')
 
-
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [isLastStep, setIsLastStep] = React.useState(false);
-  const [isFirstStep, setIsFirstStep] = React.useState(false);
-
-  const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-  const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
 
 
@@ -686,391 +670,43 @@ const Companies = () => {
     },
   ];
 
-  useEffect(() => {
-    console.log(activeStep)
-  }, [activeStep])
-  
-
 
 
 
   return (
     <div>
-      <div className='w-full px-10 py-5 mb-14'>
+      <div className='w-full px-10 py-5'>
         <form method="POST" onSubmit={(e)=>{submitNewContract(e)}}>
-          <div className="w-full px-24 py-4">
-            <Stepper
-              activeStep={activeStep}
-              isLastStep={(value) => setIsLastStep(value)}
-              isFirstStep={(value) => setIsFirstStep(value)}
-            >
-              <Step onClick={() => setActiveStep(0)}>
-                <BuildingLibraryIcon className="h-5 w-5" />
-                <div className="absolute -bottom-[4.5rem] w-max text-center">
-                  <Typography
-                    variant="h6"
-                    color={activeStep === 0 ? "blue-gray" : "gray"}
-                  >
-                    Company Details
-                  </Typography>
-                  <Typography
-                    color={activeStep === 0 ? "blue-gray" : "gray"}
-                    className="font-normal"
-                  >
-                    Fillup company info.
-                  </Typography>
-                </div>
-              </Step>
-              <Step onClick={() => setActiveStep(1)}>
-                <UserIcon className="h-5 w-5" />
-                <div className="absolute -bottom-[4.5rem] w-max text-center">
-                  <Typography
-                    variant="h6"
-                    color={activeStep === 1 ? "blue-gray" : "gray"}
-                  >
-                    Contact Details
-                  </Typography>
-                  <Typography
-                    color={activeStep === 1 ? "blue-gray" : "gray"}
-                    className="font-normal"
-                  >
-                    Fillup contact info.
-                  </Typography>
-                </div>
-              </Step>
-              <Step onClick={() => setActiveStep(2)}>
-                <CogIcon className="h-5 w-5" />
-                <div className="absolute -bottom-[4.5rem] w-max text-center">
-                  <Typography
-                    variant="h6"
-                    color={activeStep === 2 ? "blue-gray" : "gray"}
-                  >
-                    Customer Service Contracts
-                  </Typography>
-                  <Typography
-                    color={activeStep === 2 ? "blue-gray" : "gray"}
-                    className="font-normal"
-                  >
-                    Fillup relevant contact
-                  </Typography>
-                </div>
-              </Step>
-            </Stepper>
+          <div className="overflow-hidden ">
+            <div className="bg-white py-5">
+
+
+              <Tabs value="companyDetails" className='h-[27rem]'>
+                <TabsHeader className='bg-[#f0f3f4]'>
+                  {newContractData.map(({ label, value, icon }) => (
+                    <Tab key={value} value={value}>
+                      <div className="flex items-center gap-2">
+                        {React.createElement(icon, { className: "w-5 h-5" })}
+                        {label}
+                      </div>
+                    </Tab>
+                  ))}
+                </TabsHeader>
+                <TabsBody className='mt-5'>
+                  {newContractData.map(({ value, desc }) => (
+                    <TabPanel key={value} value={value}>
+                      {desc}
+                    </TabPanel>
+                  ))}
+                </TabsBody>
+              </Tabs>
+
+              <div className="bg-gray-50 space-x-3 px-4 py-3 text-right sm:px-6">
+                <button type="submit" onClick={(e)=>{submit(e)}} className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+              </div>
+              
+            </div>
           </div>
-
-          <div className='mt-28'>
-
-            {activeStep === 0 && <div >
-              <div className='flex space-x-4 w-full'>
-                <div className='flex w-full'>
-
-                  <div className='flex flex-col w-full space-y-4'>
-                    <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="companyName" className="block text-sm font-medium text-gray-700">
-                            Company Name
-                        </label>
-                        <input
-                            type="text"
-                            onChange={handleChange}
-                            name="companyName"
-                            value={companyName}
-                            id="companyName"
-                            placeholder='ABC Name'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                      <div className="w-8/12">
-                        <label htmlFor="hpNumber" className="block text-sm font-medium text-gray-700">
-                            H.P Number / A.M
-                        </label>
-                        <input
-                            type="number"
-                            onChange={handleChange}
-                            name="hpNumber"
-                            value={hpNumber}
-                            id="hpNumber"
-                            placeholder='123456789'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                    <div className='w-full flex space-x-4'>
-                      <div className="w-11/12">
-                        <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-                            Address, City
-                        </label>
-                        <input
-                            type="text"
-                            onChange={handleChange}
-                            name="address"
-                            value={address}
-                            id="address"
-                            placeholder='123 Main Street Anytown, USA'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                      <div className="w-8/12">
-                        <label htmlFor="faxNumber" className="block text-sm font-medium text-gray-700">
-                            Fax Number
-                        </label>
-                        <input
-                          type="number"
-                          onChange={handleChange}
-                          name="faxNumber"
-                          value={faxNumber}
-                          id="faxNumber"
-                          placeholder='123-456-7890'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                    <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="officePhone" className="block text-sm font-medium text-gray-700">
-                          Office Phone
-                        </label>
-                        <input
-                          type="number"
-                          onChange={handleChange}
-                          name="officePhone"
-                          value={officePhone}
-                          id="officePhone"
-                          placeholder='123-456-7890'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                    <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="loginId" className="block text-sm font-medium text-gray-700">
-                          Login Id
-                        </label>
-                        <input
-                            type="email"
-                            onChange={handleChange}
-                            name="loginId"
-                            value={loginId}
-                            id="loginId"
-                            placeholder='abc@example.com'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                      <div className="w-8/12">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          onChange={handleChange}
-                          name="password"
-                          value={password}
-                          id="password"
-                          placeholder='**********'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-8/12">
-
-                    <div className="mx-auto w-64 h-[15rem] text-center">
-                      <div className="relative w-64" onClick={handleClickContainer}>
-                        <img
-                          className="w-64 h-64 rounded-full absolute"
-                          src={src}
-                          alt=""
-                        />
-                        <div className="w-64 h-64 group hover:bg-gray-200 opacity-60 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
-                          <img
-                            className="hidden group-hover:block w-12"
-                            src="https://www.svgrepo.com/show/33565/upload.svg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <input
-                        id="imageInput"
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleImageChange}
-                      />
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>}
-
-            {activeStep === 1 && <div>
-
-              <div className='flex space-x-4 mb-14'>
-                <div className="w-full">
-                  <label htmlFor="newContractStartDate" className="block text-sm font-medium text-gray-700">
-                  Contract Start Date
-                  </label>
-                  <input
-                    type="date"
-                    onChange={handleChange}
-                    name="newContractStartDate"
-                    value={newContractStartDate}
-                    id="newContractStartDate"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractEndDate" className="block text-sm font-medium text-gray-700">
-                  Contract End Date
-                  </label>
-                  <input
-                    type="date"
-                    onChange={handleChange}
-                    name="newContractEndDate"
-                    value={newContractEndDate}
-                    id="newContractEndDate"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractUnitRent" className="block text-sm font-medium text-gray-700">
-                    Unit Rent
-                  </label>
-                  <input
-                    type="number"
-                    onChange={handleChange}
-                    name="newContractUnitRent"
-                    value={newContractUnitRent}
-                    id="newContractUnitRent"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-              <div className='flex space-x-4 mb-14'>
-                
-                <div className="w-full">
-                  <label htmlFor="newContractCommission" className="block text-sm font-medium text-gray-700">
-                    Commision
-                  </label>
-                  <input
-                    type="number"
-                    onChange={handleChange}
-                    name="newContractCommission"
-                    value={newContractCommission}
-                    id="newContractCommission"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractRentParking" className="block text-sm font-medium text-gray-700">
-                    Rent Parking
-                  </label>
-                  <input
-                    type="number"
-                    onChange={handleChange}
-                    name="newContractRentParking"
-                    value={newContractRentParking}
-                    id="newContractRentParking"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractBouncedChequeFine" className="block text-sm font-medium text-gray-700">
-                    Bounced Cheque Fine
-                  </label>
-                  <input
-                    type="number"
-                    onChange={handleChange}
-                    name="newContractBouncedChequeFine"
-                    value={newContractBouncedChequeFine}
-                    id="newContractBouncedChequeFine"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-              <div className='flex space-x-4 mb-14'>
-
-                <div className="w-full">
-                  <label htmlFor="newContractSecurityDeposit" className="block text-sm font-medium text-gray-700">
-                    Security Deposit
-                  </label>
-                  <input
-                    type="number"
-                    onChange={handleChange}
-                    name="newContractSecurityDeposit"
-                    value={newContractSecurityDeposit}
-                    id="newContractSecurityDeposit"
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  />
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractStatus" className="block text-sm font-medium text-gray-700">
-                    Contract Status
-                  </label>
-                  <select id="newContractStatus" name="newContractStatus" onChange={ handleChange } value={newContractStatus} className="mt-1 p-2 block w-full rounded-md border border-gray-300 bg-white shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                    <option value=''>select contract status</option>
-                    {newContractStatusArray.map((item, index)=>{
-                      return <option key={index} value={item}>{item}</option>
-                    })}
-                  </select>
-                </div>
-                <div className="w-full">
-                  <label htmlFor="newContractPaymentScheduling" className="block text-sm font-medium text-gray-700">
-                    Payment Scheduling
-                  </label>
-                  <select id="newContractPaymentScheduling" name="newContractPaymentScheduling" onChange={ handleChange } value={newContractPaymentScheduling} className="mt-1 p-2 block w-full rounded-md border border-gray-300 bg-white shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                    <option value=''>select payment scheduling</option>
-                    {paymentSchedulings.map((item, index)=>{
-                      return <option key={index} value={item}>{item}</option>
-                    })}
-                  </select>
-                </div>
-                
-              </div>
-              <div className='flex space-x-4'>
-
-                <div className="w-full">
-                  <textarea cols="30" rows="5" type="text"
-                    onChange={handleChange}
-                    value={newContractNotes}
-                    name="newContractNotes"
-                    id="newContractNotes"
-                    placeholder='add your notes here...'
-                    className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                  </textarea>
-                  
-                </div>
-                
-              </div>
-
-              <div className="flex items-center justify-center w-full mt-10">
-                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
-                  <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                    <svg className="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                    </svg>
-                    <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                    <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                  </div>
-                  <input id="dropzone-file" type="file" className="hidden" />
-                </label>
-              </div>
-            </div>}
-
-          </div>
-          
-
-
-          <div className="mt-10 flex justify-between">
-            <Button onClick={handlePrev} disabled={isFirstStep}>
-              Prev
-            </Button>
-            <Button onClick={handleNext} disabled={isLastStep}>
-              Next
-            </Button>
-          </div>
-
         </form>
       </div>
     </div>
