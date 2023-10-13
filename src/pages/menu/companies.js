@@ -898,13 +898,13 @@ const Companies = () => {
                   <div className="w-8/12">
 
                     <div className="mx-auto w-64 h-[15rem] text-center">
-                      <div className="relative w-64" onClick={handleClickContainer}>
+                      <div className="relative w-72" onClick={handleClickContainer}>
                         <img
-                          className="w-64 h-64 rounded-lg absolute"
+                          className="w-64 h-72 rounded-lg absolute"
                           src={src}
                           alt=""
                         />
-                        <div className="w-64 h-64 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
+                        <div className="w-64 h-72 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
                           <img
                             className="hidden group-hover:block w-12"
                             src="https://www.svgrepo.com/show/33565/upload.svg"
