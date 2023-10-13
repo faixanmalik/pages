@@ -766,14 +766,14 @@ const Companies = () => {
                         <label htmlFor="avatar" className="block w-1/4 text-sm font-semibold text-gray-700">
                             Avatar
                         </label>
-                        <div className="w-52 h-[10rem] text-center">
+                        <div className="w-44 h-[10rem] text-center">
                           <div className="relative w-52" onClick={handleClickContainer}>
                             <img
-                              className="w-52 h-52 rounded-lg absolute"
+                              className="w-44 h-52 rounded-lg absolute"
                               src={src}
                               alt=""
                             />
-                            <div className="w-52 h-52 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
+                            <div className="w-44 h-52 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
                               <img
                                 className="hidden group-hover:block w-12"
                                 src="https://www.svgrepo.com/show/33565/upload.svg"
