@@ -760,9 +760,41 @@ const Companies = () => {
                 <div className='flex w-full'>
 
                   <div className='flex flex-col w-full space-y-4'>
+
+                    <div className='w-full mb-10 flex space-x-4'>
+                      <div className="w-full flex items-center">
+                        <label htmlFor="avatar" className="block w-1/4 text-sm font-semibold text-gray-700">
+                            Avatar
+                        </label>
+                        <div className="w-52 h-[10rem] text-center">
+                          <div className="relative w-52" onClick={handleClickContainer}>
+                            <img
+                              className="w-52 h-52 rounded-lg absolute"
+                              src={src}
+                              alt=""
+                            />
+                            <div className="w-52 h-52 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
+                              <img
+                                className="hidden group-hover:block w-12"
+                                src="https://www.svgrepo.com/show/33565/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <input
+                            id="imageInput"
+                            type="file"
+                            accept="image/*"
+                            className="hidden"
+                            onChange={handleImageChange}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="companyName" className="block text-sm font-medium text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="companyName" className="block w-1/3 text-sm font-semibold text-gray-700">
                             Company Name
                         </label>
                         <input
@@ -778,8 +810,8 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="hpNumber" className="block text-sm font-medium text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="hpNumber" className="block w-1/3 text-sm font-semibold text-gray-700">
                           H.P Number / A.M
                         </label>
                         <input
@@ -794,11 +826,9 @@ const Companies = () => {
                       </div>  
                     </div>
 
-
-
                     <div className='w-full flex space-x-4'>
-                      <div className="w-11/12">
-                        <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="address" className="block w-1/3 text-sm font-semibold text-gray-700">
                             Address, City
                         </label>
                         <input
@@ -815,9 +845,9 @@ const Companies = () => {
 
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="faxNumber" className="block text-sm font-medium text-gray-700">
-                            Fax Number
+                      <div className="w-8/12 flex items-center">
+                        <label htmlFor="faxNumber" className="block w-1/2 text-sm font-semibold text-gray-700">
+                          Fax Number
                         </label>
                         <input
                           type="number"
@@ -829,8 +859,8 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12">
-                        <label htmlFor="officePhone" className="block text-sm font-medium text-gray-700">
+                      <div className="w-8/12 flex items-center">
+                        <label htmlFor="officePhone" className="block w-1/2 text-sm font-semibold text-gray-700">
                           Office Phone
                         </label>
                         <input
@@ -845,27 +875,9 @@ const Companies = () => {
                       </div>
                     </div>
 
-
-                    {/* <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="officePhone" className="block text-sm font-medium text-gray-700">
-                          Office Phone
-                        </label>
-                        <input
-                          type="number"
-                          onChange={handleChange}
-                          name="officePhone"
-                          value={officePhone}
-                          id="officePhone"
-                          placeholder='123-456-7890'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div> */}
-
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12">
-                        <label htmlFor="loginId" className="block text-sm font-medium text-gray-700">
+                      <div className="w-8/12 flex items-center">
+                        <label htmlFor="loginId" className="block w-1/2 text-sm font-semibold text-gray-700">
                           Login Id
                         </label>
                         <input
@@ -878,8 +890,8 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                      <div className="w-8/12 flex items-center">
+                        <label htmlFor="password" className="block w-1/2 text-sm font-semibold text-gray-700">
                           Password
                         </label>
                         <input
@@ -897,7 +909,7 @@ const Companies = () => {
 
                   <div className="w-8/12">
 
-                    <div className="mx-auto w-64 h-[15rem] text-center">
+                    {/* <div className="mx-auto w-64 h-[15rem] text-center">
                       <div className="relative w-72" onClick={handleClickContainer}>
                         <img
                           className="w-64 h-72 rounded-lg absolute"
@@ -919,7 +931,7 @@ const Companies = () => {
                         className="hidden"
                         onChange={handleImageChange}
                       />
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>
