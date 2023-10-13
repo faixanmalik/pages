@@ -685,13 +685,7 @@ const Companies = () => {
       ),
     },
   ];
-
-  useEffect(() => {
-    console.log(activeStep)
-  }, [activeStep])
   
-
-
 
 
   return (
@@ -701,12 +695,13 @@ const Companies = () => {
           <div className="w-full px-24 py-4">
             <Stepper
               activeStep={activeStep}
+              activeLineClassName="bg-[#ee8e00]"
               isLastStep={(value) => setIsLastStep(value)}
               isFirstStep={(value) => setIsFirstStep(value)}
             >
               <Step onClick={() => setActiveStep(0)}>
-                <BuildingLibraryIcon className="h-5 w-5" />
-                <div className="absolute -bottom-[4.5rem] w-max text-center">
+                <BuildingLibraryIcon className={`p-[11px] ${activeStep === 0 || activeStep === 1 || activeStep === 2 ? 'bg-[#ee8e00]' : ''}  rounded-full`} />
+                <div className="absolute -bottom-[4.5rem] w-max text-center ">
                   <Typography
                     variant="h6"
                     color={activeStep === 0 ? "blue-gray" : "gray"}
@@ -722,7 +717,7 @@ const Companies = () => {
                 </div>
               </Step>
               <Step onClick={() => setActiveStep(1)}>
-                <UserIcon className="h-5 w-5" />
+                <UserIcon className={`p-[11px] ${activeStep === 1 || activeStep === 2 ? 'bg-[#ee8e00]' : ''}  rounded-full`} />
                 <div className="absolute -bottom-[4.5rem] w-max text-center">
                   <Typography
                     variant="h6"
@@ -739,7 +734,7 @@ const Companies = () => {
                 </div>
               </Step>
               <Step onClick={() => setActiveStep(2)}>
-                <CogIcon className="h-5 w-5" />
+                <CogIcon className={`p-[11px] ${activeStep === 2 ? 'bg-[#ee8e00]' : ''}  rounded-full`} />
                 <div className="absolute -bottom-[4.5rem] w-max text-center">
                   <Typography
                     variant="h6"
@@ -1063,10 +1058,10 @@ const Companies = () => {
 
 
           <div className="mt-10 flex justify-between">
-            <Button onClick={handlePrev} disabled={isFirstStep}>
+            <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={handlePrev} disabled={isFirstStep}>
               Prev
             </Button>
-            <Button onClick={handleNext} disabled={isLastStep}>
+            <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={handleNext} disabled={isLastStep}>
               Next
             </Button>
           </div>
