@@ -34,7 +34,7 @@ const Companies = () => {
   const [newContractNotes, setNewContractNotes] = useState('')
 
 
-  const [src, setSrc] = useState('https://avatars.mds.yandex.net/i?id=45c28e6cffa459df5de056d7e4f3c87a4f08ba70-9229079-images-thumbs&n=13');
+  const [src, setSrc] = useState('https://t3.ftcdn.net/jpg/03/34/83/22/360_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg');
   
   const [companyName, setCompanyName] = useState('')
   const [hpNumber, setHpNumber] = useState('')
@@ -775,21 +775,27 @@ const Companies = () => {
                             className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
+                    </div>
+
+                    <div className='w-full flex space-x-4'>
                       <div className="w-8/12">
                         <label htmlFor="hpNumber" className="block text-sm font-medium text-gray-700">
-                            H.P Number / A.M
+                          H.P Number / A.M
                         </label>
                         <input
-                            type="number"
-                            onChange={handleChange}
-                            name="hpNumber"
-                            value={hpNumber}
-                            id="hpNumber"
-                            placeholder='123456789'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          type="number"
+                          onChange={handleChange}
+                          name="hpNumber"
+                          value={hpNumber}
+                          id="hpNumber"
+                          placeholder='123456789'
+                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
-                      </div>
+                      </div>  
                     </div>
+
+
+
                     <div className='w-full flex space-x-4'>
                       <div className="w-11/12">
                         <label htmlFor="address" className="block text-sm font-medium text-gray-700">
@@ -805,6 +811,10 @@ const Companies = () => {
                             className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
+                    </div>
+
+
+                    <div className='w-full flex space-x-4'>
                       <div className="w-8/12">
                         <label htmlFor="faxNumber" className="block text-sm font-medium text-gray-700">
                             Fax Number
@@ -819,8 +829,6 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                    </div>
-                    <div className='w-full flex space-x-4'>
                       <div className="w-8/12">
                         <label htmlFor="officePhone" className="block text-sm font-medium text-gray-700">
                           Office Phone
@@ -836,19 +844,38 @@ const Companies = () => {
                         />
                       </div>
                     </div>
+
+
+                    {/* <div className='w-full flex space-x-4'>
+                      <div className="w-8/12">
+                        <label htmlFor="officePhone" className="block text-sm font-medium text-gray-700">
+                          Office Phone
+                        </label>
+                        <input
+                          type="number"
+                          onChange={handleChange}
+                          name="officePhone"
+                          value={officePhone}
+                          id="officePhone"
+                          placeholder='123-456-7890'
+                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                      </div>
+                    </div> */}
+
                     <div className='w-full flex space-x-4'>
                       <div className="w-8/12">
                         <label htmlFor="loginId" className="block text-sm font-medium text-gray-700">
                           Login Id
                         </label>
                         <input
-                            type="email"
-                            onChange={handleChange}
-                            name="loginId"
-                            value={loginId}
-                            id="loginId"
-                            placeholder='abc@example.com'
-                            className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          type="email"
+                          onChange={handleChange}
+                          name="loginId"
+                          value={loginId}
+                          id="loginId"
+                          placeholder='abc@example.com'
+                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
                       <div className="w-8/12">
@@ -873,11 +900,11 @@ const Companies = () => {
                     <div className="mx-auto w-64 h-[15rem] text-center">
                       <div className="relative w-64" onClick={handleClickContainer}>
                         <img
-                          className="w-64 h-64 rounded-full absolute"
+                          className="w-64 h-64 rounded-lg absolute"
                           src={src}
                           alt=""
                         />
-                        <div className="w-64 h-64 group hover:bg-gray-200 opacity-60 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
+                        <div className="w-64 h-64 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
                           <img
                             className="hidden group-hover:block w-12"
                             src="https://www.svgrepo.com/show/33565/upload.svg"
