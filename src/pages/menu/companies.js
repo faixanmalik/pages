@@ -759,7 +759,7 @@ const Companies = () => {
               <div className='flex space-x-4 w-full'>
                 <div className='flex w-full'>
 
-                  <div className='flex flex-col w-full space-y-4'>
+                  <div className='flex flex-col w-7/12 space-y-4'>
 
                     <div className='w-full mb-10 flex space-x-4'>
                       <div className="w-full flex items-center">
@@ -843,7 +843,6 @@ const Companies = () => {
                       </div>
                     </div>
 
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-8/12 flex items-center">
                         <label htmlFor="faxNumber" className="block w-8/12 text-sm font-semibold text-gray-700">
@@ -905,34 +904,6 @@ const Companies = () => {
                         />
                       </div>
                     </div>
-                  </div>
-
-                  <div className="w-8/12">
-
-                    {/* <div className="mx-auto w-64 h-[15rem] text-center">
-                      <div className="relative w-72" onClick={handleClickContainer}>
-                        <img
-                          className="w-64 h-72 rounded-lg absolute"
-                          src={src}
-                          alt=""
-                        />
-                        <div className="w-64 h-72 group hover:bg-gray-200 opacity-60 rounded-lg absolute flex justify-center items-center cursor-pointer transition duration-500">
-                          <img
-                            className="hidden group-hover:block w-12"
-                            src="https://www.svgrepo.com/show/33565/upload.svg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <input
-                        id="imageInput"
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleImageChange}
-                      />
-                    </div> */}
-
                   </div>
                 </div>
               </div>
