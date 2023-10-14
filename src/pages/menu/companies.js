@@ -846,7 +846,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-8/12 flex items-center">
-                        <label htmlFor="faxNumber" className="block w-1/2 text-sm font-semibold text-gray-700">
+                        <label htmlFor="faxNumber" className="block w-8/12 text-sm font-semibold text-gray-700">
                           Fax Number
                         </label>
                         <input
@@ -877,7 +877,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-8/12 flex items-center">
-                        <label htmlFor="loginId" className="block w-1/2 text-sm font-semibold text-gray-700">
+                        <label htmlFor="loginId" className="block w-8/12 text-sm font-semibold text-gray-700">
                           Login Id
                         </label>
                         <input
