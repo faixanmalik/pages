@@ -774,16 +774,11 @@ const Companies = () => {
                               src={src}
                               alt=""
                             />
-                            <div className="w-32 flex flex-col ml-auto justify-between h-36 group hover:bg-gray-200 opacity-60 rounded-lg absolute cursor-pointer transition duration-500">
-                              {/* <img
-                                className="hidden group-hover:block w-12"
-                                src="https://www.svgrepo.com/show/33565/upload.svg"
-                                alt=""
-                              /> */}
+                            <div className="w-32 border-2 border-gray-400 flex flex-col ml-auto justify-between h-36 group hover:bg-gray-200 opacity-60 rounded-lg absolute cursor-pointer transition duration-500">
+                              
                               <div className='flex flex-col ml-auto -mr-10 justify-end'>
-
-                                <AiOutlineEdit onClick={handleClickContainer} className="text-blue-800 text-xl hidden group-hover:block w-12"/>
-                                <AiOutlineDelete onClick={()=>setSrc('https://t3.ftcdn.net/jpg/03/34/83/22/360_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg')} className="text-red-800 text-xl hidden group-hover:block w-12 mt-[100px]"/>
+                                <AiOutlineEdit onClick={handleClickContainer} className="text-blue-800 text-xl w-12"/>
+                                <AiOutlineDelete onClick={()=>setSrc('https://t3.ftcdn.net/jpg/03/34/83/22/360_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg')} className="text-red-800 text-xl w-12 mt-[100px]"/>
                               </div>
 
                             </div>
