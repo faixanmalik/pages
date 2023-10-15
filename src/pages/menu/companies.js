@@ -693,7 +693,7 @@ const Companies = () => {
 
   return (
     <div>
-      <div className='w-full px-10 py-5 mb-14 bg-gray-100'>
+      <div className='w-full px-10 py-5 pb-14 bg-gray-100'>
         <form method="POST" onSubmit={(e)=>{submitNewContract(e)}}>
           <div className="w-full px-24 py-4">
             <Stepper
