@@ -19,6 +19,8 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai';
+import { ImCross } from 'react-icons/im';
+import { MdClose } from 'react-icons/md';
 
 
 const Companies = () => {
@@ -691,7 +693,7 @@ const Companies = () => {
 
   return (
     <div>
-      <div className='w-full px-10 py-5 mb-14'>
+      <div className='w-full px-10 py-5 mb-14 bg-gray-100'>
         <form method="POST" onSubmit={(e)=>{submitNewContract(e)}}>
           <div className="w-full px-24 py-4">
             <Stepper
@@ -776,9 +778,9 @@ const Companies = () => {
                             />
                             <div className="w-32 border-2 border-gray-400 flex flex-col ml-auto justify-between h-36 group hover:bg-gray-200 opacity-60 rounded-lg absolute cursor-pointer transition duration-500">
                               
-                              <div className='flex flex-col ml-auto -mr-10 justify-end'>
-                                <AiOutlineEdit onClick={handleClickContainer} className="text-blue-800 text-xl w-12"/>
-                                <AiOutlineDelete onClick={()=>setSrc('https://t3.ftcdn.net/jpg/03/34/83/22/360_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg')} className="text-red-800 text-xl w-12 mt-[100px]"/>
+                              <div className='flex flex-col ml-auto -mr-7 justify-end'>
+                                <AiOutlineEdit onClick={handleClickContainer} className="text-gray-700 p-[3px] border-2 border-gray-300 bg-white rounded-full text-2xl"/>
+                                <MdClose onClick={()=>setSrc('https://t3.ftcdn.net/jpg/03/34/83/22/360_F_334832255_IMxvzYRygjd20VlSaIAFZrQWjozQH6BQ.jpg')} className="text-gray-700 border-2 border-gray-300 bg-white rounded-full text-xl mt-[100px]"/>
                               </div>
 
                             </div>
@@ -846,7 +848,7 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12 flex items-center">
+                      <div className="w-[490px] flex items-center">
                         <label htmlFor="faxNumber" className="block w-8/12 text-sm font-semibold text-gray-700">
                           Fax Number
                         </label>
@@ -877,7 +879,7 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-8/12 flex items-center">
+                      <div className="w-[490px] flex items-center">
                         <label htmlFor="loginId" className="block w-8/12 text-sm font-semibold text-gray-700">
                           Login Id
                         </label>
