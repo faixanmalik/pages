@@ -7,7 +7,7 @@ const EmailsTemplates = () => {
     <>
     <ProSidebarProvider>
     <FullLayout>
-      <div className='w-screen'>
+      <div className=''>
         EmailsTemplates
       </div>
     </FullLayout>

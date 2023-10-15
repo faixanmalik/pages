@@ -16,7 +16,7 @@ const FullLayout = ({ children }) => {
       <div className="pageWrapper d-md-block d-lg-flex flex">
         {/******** Sidebar **********/}
         <aside
-          className={`sidebarArea shadow bg-white ${
+          className={`sidebarArea shadow  ${
             !open ? "" : "showSidebar"
           }`}
         >
@@ -24,7 +24,7 @@ const FullLayout = ({ children }) => {
         </aside>
         {/********Content Area**********/}
 
-        <div className="contentArea bg-slate-50">
+        <div className="contentArea">
 
           {/********Middle Content**********/}
           <Container className="p-4 wrapper" fluid>

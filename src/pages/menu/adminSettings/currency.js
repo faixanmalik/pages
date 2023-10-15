@@ -7,7 +7,7 @@ const Currency = () => {
     <>
     <ProSidebarProvider>
     <FullLayout>
-      <div className='w-screen'>
+      <div className=''>
         Currency
       </div>
     </FullLayout>

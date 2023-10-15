@@ -7,9 +7,9 @@ const SmsTemplates = () => {
     <>
     <ProSidebarProvider>
     <FullLayout>
-    <div className='w-screen'>
-      SmsTemplates
-    </div>
+      <div className=''>
+        SmsTemplates
+      </div>
     </FullLayout>
     </ProSidebarProvider>
     </>

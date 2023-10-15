@@ -2,7 +2,7 @@ import React from 'react'
 
 const SystemSettings = () => {
   return (
-    <div className='w-screen'>
+    <div className=''>
       System Settings
     </div>
   )

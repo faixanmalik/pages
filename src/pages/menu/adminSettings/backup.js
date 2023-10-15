@@ -7,10 +7,9 @@ const Backup = () => {
     <>
     <ProSidebarProvider>
     <FullLayout>
-        <div className='w-screen'>
-            <h1 className='text-black'>Backup</h1>
+        <div className=''>
+          <h1 className='text-black'>Backup</h1>
         </div>
-
     </FullLayout>
     </ProSidebarProvider>
     </>
