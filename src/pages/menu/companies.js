@@ -360,43 +360,6 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="faxNumber" className="block w-1/4 text-sm font-semibold text-gray-700">
-                          Fax Number
-                        </label>
-                        <input
-                          type="number"
-                          onChange={handleChange}
-                          name="faxNumber"
-                          value={faxNumber}
-                          id="faxNumber"
-                          placeholder='123-456-7890'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                      
-                    </div>
-
-
-                    <div className='w-full flex space-x-4'>
-                      
-                      <div className="w-full flex items-center">
-                        <label htmlFor="officePhone" className="block w-1/4 text-sm font-semibold text-gray-700">
-                          Office Phone
-                        </label>
-                        <input
-                          type="number"
-                          onChange={handleChange}
-                          name="officePhone"
-                          value={officePhone}
-                          id="officePhone"
-                          placeholder='123-456-7890'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-
-                    <div className='w-full flex space-x-4'>
-                      <div className="w-full flex items-center">
                         <label htmlFor="email" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Personal Email
                         </label>
