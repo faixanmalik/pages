@@ -1047,7 +1047,6 @@ const Companies = () => {
                 <div className='flex w-full'>
 
                   <div className='flex flex-col w-1/2 space-y-4'>
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
                         <label htmlFor="serviceType" className="block w-1/3 text-sm font-semibold text-gray-700">
@@ -1060,7 +1059,6 @@ const Companies = () => {
                         </Select>
                       </div>
                     </div>
-
                     <div className='w-full flex space-x-4'>
 
                       <div className="w-full flex items-center">
@@ -1079,17 +1077,13 @@ const Companies = () => {
                       
                     </div>
                     <div className='w-full flex space-x-4'>
-
                       <div className="w-full flex items-center">
                         <label htmlFor="onGoingContract" className="block w-1/4 2xl:w-1/3 text-sm font-semibold text-gray-700">
                           On going Contract
                         </label>
                         <Switch color="blue" />
                       </div>
-
-                      
                     </div>
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
                         <label htmlFor="contractTerminationDate" className="block w-1/3 text-sm font-semibold text-gray-700">
@@ -1105,7 +1099,6 @@ const Companies = () => {
                         />
                       </div>
                     </div>
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
                         <label htmlFor="monthlyPrice" className="block w-1/4 text-sm font-semibold text-gray-700">
@@ -1124,7 +1117,6 @@ const Companies = () => {
                       
                     </div>
                     <div className='w-full flex space-x-4'>
-                      
                       <div className="w-full flex items-center">
                         <label htmlFor="annualPrice" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Annual Price
@@ -1140,7 +1132,6 @@ const Companies = () => {
                         />
                       </div>
                     </div>
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-9/12 flex items-center">
                         <label htmlFor="hourlyBilling" className="block w-1/2 text-sm font-semibold text-gray-700">
@@ -1152,8 +1143,6 @@ const Companies = () => {
                         </Select>
                       </div>
                     </div>
-
-
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
                         <label htmlFor="scannedContract" className="block w-1/3 2xl:w-1/3 text-sm font-semibold text-gray-700">
@@ -1168,17 +1157,13 @@ const Companies = () => {
                         "/>
                       </div>
                     </div>
-
-
-
                   </div>
+                  
                 </div>
               </div>
             </div>}
-
           </div>
         
-
           <div className="mt-10 flex justify-between">
             <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={handlePrev} disabled={isFirstStep}>
               Prev
@@ -1187,9 +1172,7 @@ const Companies = () => {
               ? <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={submit}>Save</Button>
               : <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={handleNext} disabled={isLastStep}>Next</Button>
             }
-            
           </div>
-
         </form>
       </div>
     </div>
