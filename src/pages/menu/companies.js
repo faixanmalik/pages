@@ -453,7 +453,7 @@ const Companies = () => {
                     </div>
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="onGoingContract" className="block w-1/4 2xl:w-1/5 text-sm font-semibold text-gray-700">
+                        <label htmlFor="onGoingContract" className="block w-1/4 2xl:w-1/4 text-sm font-semibold text-gray-700">
                           On going Contract
                         </label>
                         <Switch color="blue" />
