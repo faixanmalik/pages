@@ -857,8 +857,8 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-[490px] flex items-center">
-                        <label htmlFor="faxNumber" className="block w-8/12 text-sm font-semibold text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="faxNumber" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Fax Number
                         </label>
                         <input
@@ -871,8 +871,11 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12 flex items-center">
-                        <label htmlFor="officePhone" className="block w-1/2 text-sm font-semibold text-gray-700">
+                    </div>
+
+                    <div className='w-full flex space-x-4'>
+                      <div className="w-full flex items-center">
+                        <label htmlFor="officePhone" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Office Phone
                         </label>
                         <input
@@ -888,8 +891,8 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-[490px] flex items-center">
-                        <label htmlFor="email" className="block w-8/12 text-sm font-semibold text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="email" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Login Id
                         </label>
                         <input
@@ -902,8 +905,11 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12 flex items-center">
-                        <label htmlFor="password" className="block w-1/2 text-sm font-semibold text-gray-700">
+                    </div>
+
+                    <div className='w-full flex space-x-4'>
+                      <div className="w-full flex items-center">
+                        <label htmlFor="password" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Password
                         </label>
                         <input
@@ -917,6 +923,8 @@ const Companies = () => {
                         />
                       </div>
                     </div>
+
+
                   </div>
                 </div>
               </div>
@@ -976,8 +984,8 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-[490px] flex items-center">
-                        <label htmlFor="faxNumber" className="block w-8/12 text-sm font-semibold text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="faxNumber" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Fax Number
                         </label>
                         <input
@@ -990,8 +998,14 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12 flex items-center">
-                        <label htmlFor="officePhone" className="block w-1/2 text-sm font-semibold text-gray-700">
+                      
+                    </div>
+
+
+                    <div className='w-full flex space-x-4'>
+                      
+                      <div className="w-full flex items-center">
+                        <label htmlFor="officePhone" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Office Phone
                         </label>
                         <input
@@ -1146,8 +1160,7 @@ const Companies = () => {
             </div>}
 
           </div>
-          
-
+        
 
           <div className="mt-10 flex justify-between">
             <Button className='border-2 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black' onClick={handlePrev} disabled={isFirstStep}>
