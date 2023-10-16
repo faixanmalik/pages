@@ -1149,7 +1149,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="scannedContract" className="block w-1/2 text-sm font-semibold text-gray-700">
+                        <label htmlFor="scannedContract" className="block w-1/2 2xl:w-1/3 text-sm font-semibold text-gray-700">
                           Uploading a scanned contract
                         </label>
                         <input type="file" class="block w-full text-sm text-gray-500
