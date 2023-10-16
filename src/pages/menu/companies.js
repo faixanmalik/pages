@@ -20,7 +20,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
-import { Select, Option } from "@material-tailwind/react";
+import { Select, Option, Switch } from "@material-tailwind/react";
 
 
 const Companies = () => {
@@ -1062,8 +1062,9 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
+
                       <div className="w-full flex items-center">
-                        <label htmlFor="contractStartDate" className="block w-1/4 text-sm font-semibold text-gray-700">
+                        <label htmlFor="contractStartDate" className="block w-9/12 text-sm font-semibold text-gray-700">
                           Contract Start Date
                         </label>
                         <input
@@ -1075,6 +1076,15 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
+
+                      <div className="w-full flex items-center">
+                        <label htmlFor="onGoingContract" className="block w-1/2 text-sm font-semibold text-gray-700">
+                          On going Contract
+                        </label>
+                        <Switch color="blue" />
+                      </div>
+
+                      
                     </div>
 
                     <div className='w-full flex space-x-4'>
@@ -1139,7 +1149,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="scannedContract" className="block w-full text-sm font-semibold text-gray-700">
+                        <label htmlFor="scannedContract" className="block w-1/2 text-sm font-semibold text-gray-700">
                           Uploading a scanned contract
                         </label>
                         <input type="file" class="block w-full text-sm text-gray-500
