@@ -1078,7 +1078,7 @@ const Companies = () => {
                       </div>
 
                       <div className="w-full flex items-center">
-                        <label htmlFor="onGoingContract" className="block w-1/2 text-sm font-semibold text-gray-700">
+                        <label htmlFor="onGoingContract" className="block w-1/2 2xl:w-1/3 text-sm font-semibold text-gray-700">
                           On going Contract
                         </label>
                         <Switch color="blue" />
