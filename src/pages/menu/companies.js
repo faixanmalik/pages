@@ -1046,11 +1046,11 @@ const Companies = () => {
               <div className='flex space-x-4 w-full'>
                 <div className='flex w-full'>
 
-                  <div className='flex flex-col w-7/12 space-y-4'>
+                  <div className='flex flex-col w-1/2 space-y-4'>
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="serviceType" className="block w-1/4 text-sm font-semibold text-gray-700">
+                        <label htmlFor="serviceType" className="block w-1/3 text-sm font-semibold text-gray-700">
                           Service Type
                         </label>
                         <Select size="md" label="Select service" className='bg-white'>
@@ -1064,7 +1064,7 @@ const Companies = () => {
                     <div className='w-full flex space-x-4'>
 
                       <div className="w-full flex items-center">
-                        <label htmlFor="contractStartDate" className="block w-9/12 text-sm font-semibold text-gray-700">
+                        <label htmlFor="contractStartDate" className="block w-1/3 text-sm font-semibold text-gray-700">
                           Contract Start Date
                         </label>
                         <input
@@ -1076,9 +1076,12 @@ const Companies = () => {
                           className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
+                      
+                    </div>
+                    <div className='w-full flex space-x-4'>
 
                       <div className="w-full flex items-center">
-                        <label htmlFor="onGoingContract" className="block w-1/2 2xl:w-1/3 text-sm font-semibold text-gray-700">
+                        <label htmlFor="onGoingContract" className="block w-1/4 2xl:w-1/3 text-sm font-semibold text-gray-700">
                           On going Contract
                         </label>
                         <Switch color="blue" />
@@ -1089,7 +1092,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="contractTerminationDate" className="block w-1/4 text-sm font-semibold text-gray-700">
+                        <label htmlFor="contractTerminationDate" className="block w-1/3 text-sm font-semibold text-gray-700">
                           Contract Termination Date
                         </label>
                         <input
@@ -1104,8 +1107,8 @@ const Companies = () => {
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-[490px] flex items-center">
-                        <label htmlFor="monthlyPrice" className="block w-8/12 text-sm font-semibold text-gray-700">
+                      <div className="w-full flex items-center">
+                        <label htmlFor="monthlyPrice" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Monthly Price
                         </label>
                         <input
@@ -1115,11 +1118,15 @@ const Companies = () => {
                           // value={monthlyPrice}
                           id="monthlyPrice"
                           placeholder='9999'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          className="mt-1 p-2 block w-1/3 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
-                      <div className="w-8/12 flex items-center">
-                        <label htmlFor="annualPrice" className="block w-1/2 text-sm font-semibold text-gray-700">
+                      
+                    </div>
+                    <div className='w-full flex space-x-4'>
+                      
+                      <div className="w-full flex items-center">
+                        <label htmlFor="annualPrice" className="block w-1/4 text-sm font-semibold text-gray-700">
                           Annual Price
                         </label>
                         <input
@@ -1129,14 +1136,14 @@ const Companies = () => {
                           // value={annualPrice}
                           id="annualPrice"
                           placeholder='9999'
-                          className="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          className="mt-1 p-2 block w-1/3 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
                     </div>
 
                     <div className='w-full flex space-x-4'>
-                      <div className="w-full flex items-center">
-                        <label htmlFor="hourlyBilling" className="block w-1/4 text-sm font-semibold text-gray-700">
+                      <div className="w-9/12 flex items-center">
+                        <label htmlFor="hourlyBilling" className="block w-1/2 text-sm font-semibold text-gray-700">
                           Hourly Billing
                         </label>
                         <Select size="md" label="Select hourly billing" className='bg-white'>
@@ -1149,7 +1156,7 @@ const Companies = () => {
 
                     <div className='w-full flex space-x-4'>
                       <div className="w-full flex items-center">
-                        <label htmlFor="scannedContract" className="block w-1/2 2xl:w-1/3 text-sm font-semibold text-gray-700">
+                        <label htmlFor="scannedContract" className="block w-1/3 2xl:w-1/3 text-sm font-semibold text-gray-700">
                           Uploading a scanned contract
                         </label>
                         <input type="file" class="block w-full text-sm text-gray-500
