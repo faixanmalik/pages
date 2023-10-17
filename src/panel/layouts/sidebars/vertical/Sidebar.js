@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import { useRouter } from "next/router";
-import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar';
+import { Menu, MenuItem, Sidebar, SubMenu } from 'react-pro-sidebar';
 
 import { MdEmail, MdInventory2, MdSms} from 'react-icons/md'
 import {IoSettings} from 'react-icons/io5'
@@ -28,9 +28,15 @@ const Sidebar2 = ({ showMobilemenu }) => {
       <Sidebar width='255px' className='min-h-screen mt-10'>
 
         <Menu className='bg-white'>
-          <MenuItem href="/menu/adminSettings/settings" icon={<IoSettings className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium'  } >
-            System settings
-          </MenuItem>
+         
+
+          <SubMenu label="Settings" className='text-gray-600 font-medium' icon={<IoSettings className='text-lg '/>}>
+            <MenuItem href="/menu/adminSettings/settings" icon={<IoSettings className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium'  } >
+              System settings
+            </MenuItem>
+          </SubMenu>
+
+
           <MenuItem href="/menu/adminSettings/smsTemplates" icon={<MdSms className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium'} >
             SMS templates
           </MenuItem>

@@ -76,9 +76,8 @@ const LowerStatusBar = () => {
       link: '/menu/parts'
     },
     {
-      title: 'Calendar',
-      icon: FaRegCalendarAlt,
-      link: '/menu/calendar'
+      title: 'RFID',
+      link: '/menu/rfid'
     },
     {
       title: 'Marketers',
@@ -146,10 +145,19 @@ const LowerStatusBar = () => {
           }
           else{
             return  <div key={index} className={`group items-center px-4 py-2 space-y-1 flex-col ${router.pathname === item.link ? 'bg-[#222222]': 'hover:bg-[#444444]'}`}>
+
+
               <Link href={item.link} className='cursor-pointer'>
-                <item.icon className={`${router.pathname === item.link ? 'text-[#ee8e00] group-hover:text-[#ee8e00]': 'text-[#9e9e9e] '} text-[36px] mx-auto `}/>
+
+                {item.icon 
+                  ? <item.icon className={`${router.pathname === item.link ? 'text-[#ee8e00] group-hover:text-[#ee8e00]': 'text-[#9e9e9e] '} text-[36px] mx-auto `}/>
+                  : <img src="/calenderIcon.png" className='w-12 h-10 text-white' alt="calender" />
+                }
+
                 <span className={`${router.pathname === item.link ? 'text-[#ee8e00] group-hover:text-[#ee8e00]': 'text-[#8F8F8F] '} text-[15px] font-semibold`}>{item.title}</span>
               </Link>
+
+
             </div>
           }
         })}
