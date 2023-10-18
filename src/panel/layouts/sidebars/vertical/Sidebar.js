@@ -7,12 +7,9 @@ import {IoSettings} from 'react-icons/io5'
 
 import { BsBuildingFillAdd, BsCurrencyDollar} from 'react-icons/bs'
 import { LuDatabaseBackup } from 'react-icons/lu';
-import { FiUsers } from 'react-icons/fi';
 import { FaUserFriends } from 'react-icons/fa';
 import { BiSolidPackage } from 'react-icons/bi';
 import { GoDotFill } from 'react-icons/go';
-
-
 
 
 const Sidebar2 = ({ showMobilemenu }) => {
@@ -25,12 +22,8 @@ const Sidebar2 = ({ showMobilemenu }) => {
 
   return (
     <div className="">
-
       <Sidebar width='255px' className='min-h-screen mt-10'>
-
         <Menu className='bg-[#333333]'>
-         
-
           <SubMenu label="Settings" className='text-gray-600 font-medium' icon={<IoSettings className='text-lg '/>}>
             <MenuItem href="/menu/adminSettings/settings" icon={<GoDotFill className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium bg-[#333333]'  } >
               System settings
