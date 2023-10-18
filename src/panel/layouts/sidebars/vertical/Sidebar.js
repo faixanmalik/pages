@@ -10,6 +10,7 @@ import { LuDatabaseBackup } from 'react-icons/lu';
 import { FiUsers } from 'react-icons/fi';
 import { FaUserFriends } from 'react-icons/fa';
 import { BiSolidPackage } from 'react-icons/bi';
+import { GoDotFill } from 'react-icons/go';
 
 
 
@@ -27,16 +28,14 @@ const Sidebar2 = ({ showMobilemenu }) => {
 
       <Sidebar width='255px' className='min-h-screen mt-10'>
 
-        <Menu className='bg-white'>
+        <Menu className='bg-[#333333]'>
          
 
           <SubMenu label="Settings" className='text-gray-600 font-medium' icon={<IoSettings className='text-lg '/>}>
-            <MenuItem href="/menu/adminSettings/settings" icon={<IoSettings className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium'  } >
+            <MenuItem href="/menu/adminSettings/settings" icon={<GoDotFill className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium bg-[#333333]'  } >
               System settings
             </MenuItem>
           </SubMenu>
-
-
           <MenuItem href="/menu/adminSettings/smsTemplates" icon={<MdSms className='text-lg'/>} className={ location === '/panel' ?  'text-indigo-700 font-medium' : 'text-gray-600 font-medium'} >
             SMS templates
           </MenuItem>
