@@ -128,9 +128,8 @@ const Leads = () => {
                   </div>
 
 
-                  
                   <div className='flex space-x-3 items-center'>
-                    <div className="w-1/2 flex items-center">
+                    <div className="w-full flex items-center">
                       <label htmlFor="priority" className="block w-2/3 text-sm font-semibold text-gray-700">
                         Unknown Field
                       </label>
@@ -139,7 +138,11 @@ const Leads = () => {
                         <Option>Yes</Option>
                       </Select>
                     </div>
+                    <div className="w-full flex items-center"></div>
                   </div>
+
+
+
                   <textarea rows={4} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                   <div class="flex items-center justify-center w-full">
