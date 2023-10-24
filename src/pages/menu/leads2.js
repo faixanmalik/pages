@@ -117,7 +117,7 @@ const Leads = () => {
                     </div>
                     <div className="w-full flex items-center">
                       <label htmlFor="topic" className="block w-2/3 text-sm font-semibold text-gray-700">
-                        Select Topic
+                        Topic
                       </label>
                       <Select label="Select">
                         {topicList.map((item, index)=>{
@@ -126,39 +126,47 @@ const Leads = () => {
                       </Select>
                     </div>
                   </div>
-
-
-                  
-                  <div className='flex space-x-3 items-center'>
-                    <div className="w-1/2 flex items-center">
-                      <label htmlFor="priority" className="block w-2/3 text-sm font-semibold text-gray-700">
-                        Change Priority
-                      </label>
-                      <Select label="Select">
-                        <Option>No</Option>
-                        <Option>Yes</Option>
-                      </Select>
-                    </div>
-                  </div>
-                  <textarea rows={4} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
-
-                  <div class="flex items-center justify-center w-full">
-                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-36 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                            </svg>
-                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                        </div>
-                        <input id="dropzone-file" type="file" class="hidden" />
-                    </label>
-                  </div>
-
+                  <textarea rows={6} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
                 </div>
 
-                
-                
+                <div className='w-1/3 bg-[#f7f7f7] rounded-lg'>
+                  <div className='p-3'>
+                    <h1 className='font-bold pb-2 text-blue-700 text-lg text-center'>Physical arrival to the customer</h1>
+                    <Select label="Select">
+                      <Option>No</Option>
+                      <Option>Yes</Option>
+                    </Select>
+
+                    <div className='mx-1 mt-3'>
+                      <label class="block text-sm font-medium text-gray-900 dark:text-white" htmlFor="default_size">File Uploading</label>
+                      <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-r-md cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="default_size" type="file"></input>
+                    </div>
+
+                    <div className='mt-3'>
+                      
+                      <Radio
+                        name="terms"
+                        className="hover:before:opacity-0"
+                        label={
+                          <Typography color="blue-gray" className="flex font-medium text-sm text-blue-gray-500">
+                            Send an email to the technician about updating.
+                          </Typography>
+                        }
+                      />
+                      <Radio
+                        name="terms"
+                        className="hover:before:opacity-0"
+                        label={
+                          <Typography color="blue-gray" className="flex font-medium text-sm text-blue-gray-500">
+                            Send an SMS to the technician about updating.
+                          </Typography>
+                        }
+                      />
+
+                    </div>
+                    
+                  </div>
+                </div>
               </div>
 
               <div className='border-t-2 border-gray-200'>
