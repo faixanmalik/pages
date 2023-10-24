@@ -172,8 +172,6 @@ const Leads = () => {
               <div className='border-t-2 border-gray-200'>
                 <Button className='border-2 float-right my-4 mr-5 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black'>Save</Button>
               </div>
-
-
             </CardBody>
           </Card>
         </div>
