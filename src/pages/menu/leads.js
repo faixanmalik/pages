@@ -31,7 +31,7 @@ const Leads = () => {
     <>
     <div className='bg-[#f7f7f7] min-h-screen'>
 
-      <div className='px-10'>
+      <div className='px-10 py-5'>
         <div className='flex flex-wrap space-x-3'>
           {cards.map((item, index)=>{
             return <Card key={index} className="mt-6 w-56 h-36">
