@@ -76,7 +76,6 @@ const Leads = () => {
               
               <div className="flex gap-10">
                 <Radio name="type" label="Card" defaultChecked/>
-                <Radio name="type" label="Project" />
               </div>
 
               <div className='flex space-x-3 w-full py-4'>
@@ -84,7 +83,7 @@ const Leads = () => {
                 <div className='flex flex-col w-2/3 space-y-4'>
                   <div className='flex space-x-3 items-center'>
                     <div className="w-full flex items-center">
-                      <label htmlFor="companySelection" className="block w-2/3 text-sm font-semibold text-gray-700">
+                      <label htmlFor="companySelection" className="block w-2/3 2xl:w-1/2 text-sm font-semibold text-gray-700">
                         Company Selection
                       </label>
                       <Select label="Select">
@@ -94,7 +93,7 @@ const Leads = () => {
                       </Select>
                     </div>
                     <div className="w-full flex items-center">
-                      <label htmlFor="technician" className="block w-2/3 text-sm font-semibold text-gray-700">
+                      <label htmlFor="technician" className="block w-2/3 2xl:w-1/2 text-sm font-semibold text-gray-700">
                         Select a Technician
                       </label>
                       <Select label="Select">
@@ -106,7 +105,7 @@ const Leads = () => {
                   </div>
                   <div className='flex space-x-3 items-center'>
                     <div className="w-full flex items-center">
-                      <label htmlFor="priority" className="block w-2/3 text-sm font-semibold text-gray-700">
+                      <label htmlFor="priority" className="block w-2/3 2xl:w-1/2 text-sm font-semibold text-gray-700">
                         Change Priority
                       </label>
                       <Select label="Select">
@@ -116,7 +115,7 @@ const Leads = () => {
                       </Select>
                     </div>
                     <div className="w-full flex items-center">
-                      <label htmlFor="topic" className="block w-2/3 text-sm font-semibold text-gray-700">
+                      <label htmlFor="topic" className="block w-2/3 2xl:w-1/2 text-sm font-semibold text-gray-700">
                         Select Topic
                       </label>
                       <Select label="Select">
@@ -140,10 +139,7 @@ const Leads = () => {
                     </div>
                     <div className="w-full flex items-center"></div>
                   </div>
-
-
-
-                  <textarea rows={4} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
+                  <textarea rows={5} placeholder='write the description of problem' name="desc " id='desc' type="text" className="px-3 w-full py-2 mt-1 text-sm bg-white bg-opacity-50 resize-none text-gray-700 outline-none border border-gray-300 focus:border-blue-500 focus:shadow-lg shadow-blue-500 rounded-lg  transition-colors duration-200 ease-in-out" />
 
                   <div class="flex items-center justify-center w-full">
                     <label for="dropzone-file" class="flex flex-col items-center justify-center w-[570px] h-[150px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
