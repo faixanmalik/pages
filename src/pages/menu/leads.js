@@ -66,7 +66,7 @@ const Leads = () => {
         </div>
 
         <div className='w-full'>
-          <Card className="mt-6">
+          <Card className="my-6">
             <CardBody className='px-5 py-2'>
 
               <div className='flex items-center space-x-3 ml-3 py-4'>
@@ -142,18 +142,6 @@ const Leads = () => {
                       <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-r-md cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="default_size" type="file"></input>
                     </div>
 
-
-                    {/* <div className='mt-3 flex flex-col space-y-1'>
-                      <div class="flex items-center ">
-                        <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                        <label for="link-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Send an email to the technician about updating.</label>
-                      </div>
-                      <div class="flex items-center">
-                        <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                        <label for="link-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Send an email to the technician about updating.</label>
-                      </div>
-                    </div> */}
-
                     <div className='mt-3'>
                       
                       <Radio
@@ -177,13 +165,12 @@ const Leads = () => {
 
                     </div>
                     
-
                   </div>
                 </div>
+              </div>
 
-
-                
-
+              <div className='border-t-2 border-gray-200'>
+                <Button className='border-2 float-right my-4 mr-5 border-[#ee8e00] hover:bg-[#ee8e00] hover:text-white rounded-md bg-white text-black'>Save</Button>
               </div>
 
 
