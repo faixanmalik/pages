@@ -80,7 +80,7 @@ const Leads = () => {
 
               <div className='flex space-x-3 w-full py-4'>
 
-                <div className='flex flex-col w-2/3 space-y-4'>
+                <div className='flex flex-col w-2/3 space-y-6'>
                   <div className='flex space-x-3 items-center'>
                     <div className="w-full flex items-center">
                       <label htmlFor="companySelection" className="block w-2/3 2xl:w-1/2 text-sm font-semibold text-gray-700">
