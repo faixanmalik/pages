@@ -131,7 +131,7 @@ const Leads = () => {
 
                 <div className='w-1/3 bg-[#f7f7f7] rounded-lg'>
                   <div className='p-3'>
-                    <h1 className='font-bold text-blue-700 text-lg text-center'>Physical arrival to the customer</h1>
+                    <h1 className='font-bold pb-2 text-blue-700 text-lg text-center'>Physical arrival to the customer</h1>
                     <Select label="Select">
                       <Option>No</Option>
                       <Option>Yes</Option>
